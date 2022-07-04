@@ -1,0 +1,17 @@
+.contact {
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    margin-top: 250px;
+        &__text {
+            color: #1E0E62;
+            font-size: 50px;
+            font-weight: 700;
+            line-height: 70px;
+            margin-bottom: 250px;
+                &--gradient {
+                    background: linear-gradient(60deg, #13B0F5, #E70FAA);
+                    background-clip: text;
+                    color: transparent;
+                }
+        }
+}

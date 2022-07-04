@@ -1,0 +1,61 @@
+.projectCard {
+    width: 375px;
+    text-align: left;
+    box-shadow: 1px 8px 29px 0px grey;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 570px;
+    margin: auto;
+        &__picture {
+            width: 375px;
+            height: 260px;
+            border-bottom: 1px solid black;
+        }
+        &__title {
+            text-align: center;
+            font-size: 28px;
+                &:hover {
+                    cursor: default;
+                }
+        }
+        &__description {
+            margin: 0 15px 0 15px;
+            font-weight: lighter;
+            font-size: 18px;
+            line-height: 26px;
+            color: $secondary-text-color;
+                &:hover {
+                    cursor: default;
+                }
+        }
+        &__stack {
+            margin: 20px 15px 0 15px;
+            color: $primary-text-color;
+            font-size: 16px;
+            margin-bottom: 20px;
+                &--lighter {
+                    font-weight: lighter;
+                }
+                &:hover {
+                    cursor: default;
+                }
+        }
+        &__links {
+            display: flex;
+            justify-content: flex-end;
+            margin: 10px 30px 0 15px;
+                &__part {
+                    display: flex;
+                    align-items: center;
+                        &__picture {
+                            width: 18px;
+                            height: 18px;
+                            margin-right: 7px;
+                        }
+                        &__text {
+                            color: black;
+                            font-size: 18px;
+                        }
+                }
+        }
+}

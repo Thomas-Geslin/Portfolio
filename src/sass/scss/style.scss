@@ -1,0 +1,19 @@
+@import "./base/normalize";
+@import "./base/typo";
+
+
+@import "./utils/variables";
+
+
+@import "./layouts/header";
+
+@import "./layouts/Home/homePresentation";
+@import "./layouts/Home/homeTechStack";
+@import "./layouts/Home/homeProjects";
+@import "./layouts/projectCard";
+
+@import "./layouts/contact";
+
+@import "./layouts/about";
+
+@import "./layouts/footer";

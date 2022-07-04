@@ -1,0 +1,26 @@
+.homeTechStack {
+    text-align: center;
+    margin-top: 240px;
+    font-family: 'Poppins', sans-serif;
+        &__title {
+            color: $primary-text-color;
+            font-size: 48px;
+            font-weight: 700;
+        }
+        &__text {
+            color: $secondary-text-color;
+            font-size: 26px;
+            margin-bottom: 100px;
+        }
+        &__grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 90px;
+            margin-bottom: 200px;
+                &__icon {
+                    justify-self: center;
+                }
+        }
+}

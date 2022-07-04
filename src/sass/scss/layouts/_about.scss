@@ -1,0 +1,16 @@
+.about {
+    text-align: center;
+    margin-top: 150px;
+        &__text {
+            font-family: 'DM Sans', sans-serif;
+            color: #1E0E62;
+            font-size: 50px;
+            font-weight: 700;
+            margin-bottom: 50px;
+        }
+        &__picture {
+            box-shadow: 0px 8px 18px 6px #474747;
+            border-radius: 20px;
+            margin-bottom: 150px;
+        }
+}

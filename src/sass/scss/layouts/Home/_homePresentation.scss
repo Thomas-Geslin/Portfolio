@@ -1,0 +1,15 @@
+.homePresentation {
+    display: flex;
+    justify-content: space-around;  
+    margin-top: 220px; 
+        &__text {
+            font-size: 58px;
+            font-weight: 700;
+            color: $primary-text-color;
+                &--purple {
+                    background: linear-gradient(60deg, #13B0F5, #E70FAA);
+                    background-clip: text;
+                    color: transparent;
+                }
+        }
+}
