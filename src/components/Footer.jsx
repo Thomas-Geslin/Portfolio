@@ -31,7 +31,8 @@ const StyledText = styled.h2`
 export default function Footer() {
   const { theme } = useTheme();
 
-    return(<Reveal keyframes={reveal} duration={2500} triggerOnce><div className="footer">
+    return(<Reveal keyframes={reveal} duration={2500} triggerOnce>
+           <footer className="footer">
                 <img src={logo} alt='logo du portfolio' className='footer__picture' />
 
                 <div className='footer__contact'>
@@ -43,5 +44,6 @@ export default function Footer() {
                         <img src={linkedin} alt="logo de linkedin" className='footer__contact__logo__part' />
                     </div>
                 </div>
-            </div></Reveal>) 
+            </footer>
+            </Reveal>) 
 }

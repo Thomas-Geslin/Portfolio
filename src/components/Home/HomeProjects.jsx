@@ -1,9 +1,10 @@
 import ProjectCard from "../ProjectCard"
-import background from '../../assets/project_background.png'
-import booki from '../../assets/Booki.png'
-import ohmyfood from '../../assets/ohmyfood.jpg'
-import car from '../../assets/car-background.png'
-import groupomania from '../../assets/groupomania.png'
+import booki from '../../assets/booki-project.png'
+import ohmyfood from '../../assets/ohmyfood-project.png'
+import car from '../../assets/encar-project.png'
+import shiny from '../../assets/shiny-project.png'
+import kanap from '../../assets/kanap-project.png'
+import groupomania from '../../assets/groupomania-project.png'
 
 import { useTheme } from '../../utils/hooks/hooks'
 
@@ -57,18 +58,18 @@ const projectsList = [
         githubLink: 'https://github.com/Thomas-Geslin/Car-Responsive-Website'
     },
     {
-        picture: background,
+        picture: shiny,
         title: 'Shiny',
-        description: "Site permettant de trouver des freelances en fonction de réponses à un questionnaire.   ",
+        description: "Site permettant de trouver des freelances en fonction de réponses à un questionnaire. Réalisé grâce au framework React.   ",
         techStack:'React, Sass',
         githubLink: 'https://github.com/Thomas-Geslin/Shiny-Agence'
     },
     {
-        picture: background,
-        title: 'Hot Takes',
-        description: "Création d'une API REST complète pour un site de notation, ainsi que de la BDD liée. Réalisé avec le framework Express et MongoDB.",
-        techStack:'NodeJS, Express, MongoDB',
-        githubLink: 'https://github.com/Thomas-Geslin/OC-ProjetN5-HotTakes'
+        picture: kanap,
+        title: 'Kanap',
+        description: "Réalisation du lien entre le front-end et le back-end d'un site e-commerce, à l'aide de JavaScript pur (sans framework).",
+        techStack:'JavaScript',
+        githubLink: 'https://github.com/Thomas-Geslin/OC-ProjetN4-Kanap'
     },
     {
         picture: groupomania,
@@ -84,7 +85,7 @@ export default function HomeProjects() {
 
     return(<div className="homeProjects" id="projects">
                 <Reveal keyframes={reveal} triggerOnce duration={2500}><StyledTitle theme={theme} className="homeProjects__title">Projets</StyledTitle></Reveal>
-                <Reveal keyframes={reveal} triggerOnce duration={2500}><StyledSubtitle theme={theme} className="homeProjects__text">Projets que j'ai réalisé jusqu'à présent</StyledSubtitle></Reveal>
+                <Reveal keyframes={reveal} triggerOnce duration={2500}><StyledSubtitle theme={theme} className="homeProjects__text">Quelques-uns des projets que j'ai réalisé jusqu'à présent</StyledSubtitle></Reveal>
 
                 <div className="homeProjects__grid">
                     {projectsList.map((project, index) => (

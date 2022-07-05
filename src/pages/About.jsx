@@ -1,11 +1,26 @@
-import CV from '../assets/cv.png'
+import { useTheme } from '../utils/hooks/hooks'
 
-import Footer from "../components/Footer"
+import styled from 'styled-components'
+
+
+const StyledTitle = styled.h2`
+  color: ${({ theme }) => (theme === 'light' ? '#000000' : '#CCCCCC')};
+`
+
 
 export default function About() {
-    return(<div className='about'>
-                <p className='about__text'>À propos :</p>
-                <img src={CV} alt='Mon CV' className='about__picture' />
-                <Footer />
+    const { theme } = useTheme();
+
+    return(<div className='about' id='about'>
+                <StyledTitle theme={theme} className='about__text'>À propos :</StyledTitle>
+                <div>
+                  <div>
+                    <h3>Un travail qui me passionne !</h3>
+                  </div>
+                    
+                  <div>
+                    <h3>Mon expérience à votre service !</h3>
+                  </div>
+                </div>
             </div>)
 }

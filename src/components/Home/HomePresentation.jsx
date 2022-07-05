@@ -1,33 +1,21 @@
-import head from '../../assets/head.png'
+import background from '../../assets/background-home.png'
+import presentation from '../../assets/presentation-background.png'
 
 import { useTheme } from '../../utils/hooks/hooks'
 
 import styled from 'styled-components'
+import { useEffect } from 'react';
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 
 
-const revealLeft = keyframes`
+const reveal = keyframes`
   from {
     opacity: 0;
-    transform: translateX(90px);
   }
 
   to {
     opacity: 1;
-    transform: translateX(0);
-  }
-`;
-
-const revealRight = keyframes`
-  from {
-    opacity: 0;
-    transform: translateX(-90px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
   }
 `;
 
@@ -37,11 +25,42 @@ const StyledText = styled.p`
 `
 
 
+function autotext() {
+  const target = document.getElementById('autotext');
+  const text = "Hey,\nI'm Thomas,\nWeb Developer ";
+
+  let index = 0;
+
+  const randomSpeed = (min, max) => {
+    return Math.floor(Math.random() * (max-min) + min); 
+  }
+  
+  const play = () => {
+    if(index < text.length) {
+      target.innerText = text.slice(0, index);
+    
+      index++;
+    
+      clearInterval(timer);
+      timer = setInterval(play, randomSpeed(40, 150));
+    }
+  }
+  let timer = setInterval(play, 300);
+}
+
+
 export default function HomePresentation() {
   const { theme } = useTheme()
 
-  return(<div className='homePresentation' id='home'>
-              <Reveal keyframes={revealRight} triggerOnce duration={2500}><StyledText theme={theme} className='homePresentation__text'>Hi 👋,<br/>My name is<br/><span className='homePresentation__text--purple'>Thomas Geslin</span><br/>I build things for web</StyledText></Reveal>
-              <Reveal keyframes={revealLeft} triggerOnce duration={2500}><img src={head} alt='profil' /></Reveal>
-          </div>)
+  useEffect(() => {
+    autotext();
+  }, [])
+
+  return(<Reveal keyframes={reveal} duration={2500} triggerOnce>
+         <div className='homePresentation' id='home'>
+              <StyledText theme={theme} className='homePresentation__text' id='autotext'></StyledText>
+              <img src={background} alt='profil' className='homePresentation__background' />
+              <img src={presentation} alt='zz' className='homePresentation__picture' />
+          </div>
+          </Reveal>)
 }

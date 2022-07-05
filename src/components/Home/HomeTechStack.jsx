@@ -43,7 +43,7 @@ export default function HomeTechStack() {
 
     return(<div className='homeTechStack' id='stacks'>
                 <Reveal keyframes={reveal} triggerOnce duration={2500}><StyledTitle theme={theme} className='homeTechStack__title'>My Tech Stack</StyledTitle></Reveal>
-                <Reveal keyframes={reveal} triggerOnce duration={2500}><StyledSubtitle className='homeTechStack__text'>Technologies avec lesquelles j'ai travaillé récemment</StyledSubtitle></Reveal>
+                <Reveal keyframes={reveal} triggerOnce duration={2500}><StyledSubtitle className='homeTechStack__text'>Technologies avec lesquelles j'aime travailler</StyledSubtitle></Reveal>
 
                 <div className='homeTechStack__grid'>
                     <Reveal keyframes={reveal} triggerOnce duration={2500}><img src={htmlLogo} alt='Logo HTML' className='homeTechStack__grid__icon' /></Reveal>

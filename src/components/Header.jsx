@@ -1,50 +1,58 @@
 import logo from '../assets/logo.png'
-import DarkModeButton from './DarkModeButton';
-
 import { useTheme } from '../utils/hooks/hooks'
 
-import { Link as scroll} from 'react-scroll'
-import { Link } from "react-router-dom"
+import { Link } from 'react-scroll'
 import styled from 'styled-components'
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 
-const reveal = keyframes`
+
+const revealTop = keyframes`
   from {
     opacity: 0;
-    transform: translateY(-50px);
+    transform: translateY(-20px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0px);
   }
 `;
 
 
-const StyledText = styled(scroll)`
-  color: ${({ theme }) => (theme === 'light' ? '#000000' : '#A7A7A7')};
+const StyledText = styled(Link)`
+  color: ${({ theme }) => (theme === 'light' ? '#000000' : 'white')};
 `
 
-const StyledLink = styled(Link)`
-  color: ${({ theme }) => (theme === 'light' ? '#000000' : '#A7A7A7')};
+const StyledHeader = styled.header`
+  background-color: ${({ theme }) => (theme === 'light' ? 'white' : '#191919')};
 `
+
+
+function fixedHeader() {
+  const header = document.getElementById('onscroll');
+      if (document.documentElement.scrollTop > 0) {
+          header.classList.add('onscroll');
+      } else {
+          header.classList.remove('onscroll');
+      }
+}
+window.onscroll = fixedHeader;
 
 
 export default function Header() {
   const { theme } = useTheme()
 
-  return(<Reveal keyframes={reveal} triggerOnce duration={2500}><div className='header'>
-              <img src={logo} alt='Logo du Portfolio' className='header__picture' />
+  return(<StyledHeader theme={theme} className='header' id='onscroll'>
+              <Reveal keyframes={revealTop} duration={2500} triggerOnce className='header__picture'><img src={logo} alt='Logo du Portfolio' className='header__picture' /></Reveal>
 
-              <div className='header__nav'>
-                  <StyledLink theme={theme} to='/' className='header__nav__part'>Home</StyledLink>
-                  <StyledText to='stacks' smooth={true} theme={theme} className='header__nav__part'>Tech Stack</StyledText>
-                  <StyledText to='projects' smooth={true} theme={theme} className='header__nav__part'>Projets</StyledText>
-                  <StyledLink theme={theme} to='/about' className='header__nav__part'>À propos</StyledLink>
-                  <StyledLink theme={theme} to='/contact' className='header__nav__part'>Contact</StyledLink>
-                  <DarkModeButton />
-              </div>
+              <Reveal keyframes={revealTop} duration={2500} triggerOnce className='header__nav' id='header'>
+                  <StyledText to='home' smooth={true} offset={-400} theme={theme} className='header__nav__part'>Home</StyledText>
+                  <StyledText to='stacks' smooth={true} offset={-130} theme={theme} className='header__nav__part'>Tech Stack</StyledText>
+                  <StyledText to='projects' smooth={true} offset={-130} theme={theme} className='header__nav__part'>Projets</StyledText>
+                  <StyledText to='about' smooth={true} offset={-130} theme={theme} className='header__nav__part'>À propos</StyledText>
+                  <StyledText to='contact' smooth={true} offset={-130} theme={theme} className='header__nav__part'>Contact</StyledText>
+              </Reveal>
 
-          </div></Reveal>)
+          </StyledHeader>)
 }

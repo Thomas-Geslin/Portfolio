@@ -1,0 +1,55 @@
+.darkButton {
+    border: none;
+    border-radius: 0 10px 10px 0;
+    position: fixed;
+    left: 0;
+    top: 300px;
+    padding: 20px;
+    transition: .5s;
+        &:hover {
+            cursor: pointer;
+        }
+}
+
+.modeSelector {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    border-radius: 0 0 10px 0;
+    text-align: center;
+    position: fixed;
+    top: 300px;
+    left: -287px;
+    width: 15%;
+    transition: .5s;
+        &__title {
+            width: 50%;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid lightgrey;
+        }
+        &__switch {
+            display: flex;
+            justify-content: space-around;
+                &__mode {
+                    border: 1px solid black;
+                    padding: 8px;
+                    margin-bottom: 40px;
+                    transition: .5s;
+                        &:hover {
+                            cursor: pointer;
+                            color: white;
+                            background-color: black;
+                        }
+                }
+        }
+}
+
+.containerAppear {
+    left: 0;
+}
+
+.buttonAppear {
+    left: 285px;
+}

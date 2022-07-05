@@ -23,6 +23,20 @@ body {
   font-family: "Trebuchet MS";
 }
 
+body::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 1rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #27282a;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #3b3c40;
+  border-radius: 1rem;
+}
+
 /**
  * Render the `main` element consistently in IE.
  */
@@ -339,58 +353,83 @@ template {
   display: none;
 }
 
+@keyframes reactSpin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .header {
+  background-color: white;
   display: flex;
-  margin-top: 50px;
-  margin-bottom: 70px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  transition: 0.5s;
 }
 .header__picture {
-  margin-right: 50%;
+  width: 80px;
+  margin: 1% 5%;
 }
 .header__nav {
   display: flex;
-  justify-content: space-between;
-  width: 40%;
+  justify-content: center;
+  width: 77%;
 }
 .header__nav__part {
   font-family: "DM Sans", sans-serif;
   font-size: 20px;
   text-decoration: none;
-  color: black;
+  text-align: center;
   align-self: center;
+  min-width: 150px;
+  padding: 40px 0;
 }
 .header__nav__part:hover {
   cursor: pointer;
 }
 
-.darkButton {
-  margin-top: 20px;
-  background-color: transparent;
-  border: none;
-}
-.darkButton:hover {
-  cursor: pointer;
+.onscroll {
+  position: fixed;
+  right: 0;
+  left: 0;
+  background-color: white;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 1px 4px lightgray;
+  transition: 0.5s;
+  z-index: 1000;
 }
 
 .homePresentation {
   display: flex;
-  justify-content: space-around;
-  margin-top: 220px;
+  justify-content: space-between;
+  margin-top: 330px;
 }
 .homePresentation__text {
   font-size: 58px;
   font-weight: 700;
-  color: #42446E;
+  width: 500px;
+  text-align: left;
+  margin: 100px;
 }
 .homePresentation__text--purple {
   background: linear-gradient(60deg, #13B0F5, #E70FAA);
   background-clip: text;
   color: transparent;
 }
+.homePresentation__background {
+  position: absolute;
+  z-index: -1;
+  animation: reactSpin infinite linear 6s;
+}
+.homePresentation__picture {
+  width: 45%;
+  height: auto;
+}
 
 .homeTechStack {
   text-align: center;
-  margin-top: 240px;
+  margin-top: 300px;
   font-family: "Poppins", sans-serif;
 }
 .homeTechStack__title {
@@ -440,17 +479,15 @@ template {
 
 .projectCard {
   width: 375px;
-  text-align: left;
-  box-shadow: 1px 8px 29px 0px grey;
+  text-align: center;
   border-radius: 20px;
   overflow: hidden;
-  height: 570px;
   margin: auto;
 }
 .projectCard__picture {
-  width: 375px;
-  height: 260px;
-  border-bottom: 1px solid black;
+  width: 90%;
+  background-color: lightgray;
+  padding: 0 20px;
 }
 .projectCard__title {
   text-align: center;
@@ -465,6 +502,7 @@ template {
   font-size: 18px;
   line-height: 26px;
   color: #666666;
+  text-align: left;
 }
 .projectCard__description:hover {
   cursor: default;
@@ -474,6 +512,7 @@ template {
   color: #42446E;
   font-size: 16px;
   margin-bottom: 20px;
+  text-align: left;
 }
 .projectCard__stack--lighter {
   font-weight: lighter;
@@ -484,7 +523,7 @@ template {
 .projectCard__links {
   display: flex;
   justify-content: flex-end;
-  margin: 10px 30px 0 15px;
+  margin: 10px 30px 20px 15px;
 }
 .projectCard__links__part {
   display: flex;
@@ -510,12 +549,76 @@ template {
   font-size: 50px;
   font-weight: 700;
   line-height: 70px;
-  margin-bottom: 250px;
+  margin-bottom: 100px;
 }
 .contact__text--gradient {
   background: linear-gradient(60deg, #13B0F5, #E70FAA);
   background-clip: text;
   color: transparent;
+}
+.contact__form {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  text-align: left;
+  margin-left: 200px;
+}
+.contact__form__name {
+  display: flex;
+  justify-content: space-between;
+  width: 88%;
+}
+.contact__form__name__input {
+  width: 80%;
+  margin-bottom: 40px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  outline: none;
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+.contact__form__name__input::placeholder {
+  color: white;
+}
+.contact__form__email {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.contact__form__email__input {
+  margin-bottom: 40px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  outline: none;
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+.contact__form__email__input::placeholder {
+  color: white;
+}
+.contact__form__message {
+  display: flex;
+  flex-direction: column;
+}
+.contact__form__message__input {
+  color: white;
+  width: 40%;
+  margin-bottom: 40px;
+  padding-left: 10px;
+  padding-top: 10px;
+  background-color: transparent;
+}
+.contact__form__message__input::placeholder {
+  color: white;
+}
+.contact__form__submit {
+  margin-bottom: 100px;
+}
+.contact__form__submit:hover {
+  cursor: pointer;
 }
 
 .about {
@@ -533,6 +636,62 @@ template {
   box-shadow: 0px 8px 18px 6px #474747;
   border-radius: 20px;
   margin-bottom: 150px;
+}
+
+.darkButton {
+  border: none;
+  border-radius: 0 10px 10px 0;
+  position: fixed;
+  left: 0;
+  top: 300px;
+  padding: 20px;
+  transition: 0.5s;
+}
+.darkButton:hover {
+  cursor: pointer;
+}
+
+.modeSelector {
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+  border-radius: 0 0 10px 0;
+  text-align: center;
+  position: fixed;
+  top: 300px;
+  left: -287px;
+  width: 15%;
+  transition: 0.5s;
+}
+.modeSelector__title {
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+.modeSelector__switch {
+  display: flex;
+  justify-content: space-around;
+}
+.modeSelector__switch__mode {
+  border: 1px solid black;
+  padding: 8px;
+  margin-bottom: 40px;
+  transition: 0.5s;
+}
+.modeSelector__switch__mode:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+
+.containerAppear {
+  left: 0;
+}
+
+.buttonAppear {
+  left: 285px;
 }
 
 .footer {
