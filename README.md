@@ -1,6 +1,6 @@
 # Portfolio
 
-Voiçi mon portfolio réalisé avec React
+Voici mon portfolio réalisé avec React
 
 ## Installer le projet
 
