@@ -1,3 +1,6 @@
+/** Projects Page */
+
+// Import Pictures
 import ProjectCard from "../ProjectCard"
 import booki from '../../assets/booki-project.png'
 import ohmyfood from '../../assets/ohmyfood-project.png'
@@ -8,11 +11,13 @@ import groupomania from '../../assets/groupomania-project.png'
 
 import { useTheme } from '../../utils/hooks/hooks'
 
+// Import Libraries
 import styled from 'styled-components'
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 
 
+// Keyframe for smooth reveal
 const reveal = keyframes`
   from {
     opacity: 0;
@@ -26,6 +31,7 @@ const reveal = keyframes`
 `;
 
 
+// Styled components
 const StyledTitle = styled.h2`
   color: ${({ theme }) => (theme === 'light' ? '#000000' : '#CCCCCC')};
 `
@@ -35,6 +41,7 @@ const StyledSubtitle = styled.p`
 `
 
 
+// List of Projects
 const projectsList = [
     {
         picture: booki,
@@ -80,6 +87,8 @@ const projectsList = [
     }
 ]
 
+
+// JSX of the page
 export default function HomeProjects() {
     const { theme } = useTheme();
 
@@ -88,6 +97,7 @@ export default function HomeProjects() {
                 <Reveal keyframes={reveal} triggerOnce duration={2500}><StyledSubtitle theme={theme} className="homeProjects__text">Quelques-uns des projets que j'ai réalisé jusqu'à présent</StyledSubtitle></Reveal>
 
                 <div className="homeProjects__grid">
+                    {/* Create a card for each project */}
                     {projectsList.map((project, index) => (
                         <Reveal keyframes={reveal} triggerOnce duration={2500}><ProjectCard 
                             key={`${project}-${index}`}

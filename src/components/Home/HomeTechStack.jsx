@@ -1,3 +1,6 @@
+/** TechStack Page */
+
+// Import Pictures
 import htmlLogo from '../../assets/html.png'
 import cssLogo from '../../assets/css.png'
 import jsLogo from '../../assets/js.png'
@@ -11,11 +14,13 @@ import dockerLogo from '../../assets/docker.png'
 
 import { useTheme } from '../../utils/hooks/hooks'
 
+// Import Libraries
 import styled from 'styled-components'
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 
 
+// Keyframe for smooth reveal
 const reveal = keyframes`
   from {
     opacity: 0;
@@ -29,6 +34,7 @@ const reveal = keyframes`
 `;
 
 
+// Styled Components
 const StyledTitle = styled.h2`
   color: ${({ theme }) => (theme === 'light' ? '#000000' : '#CCCCCC')};
 `
@@ -38,6 +44,7 @@ const StyledSubtitle = styled.p`
 `
 
 
+// JSX of the page
 export default function HomeTechStack() {
   const { theme } = useTheme();
 

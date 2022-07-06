@@ -1,10 +1,14 @@
+/** Contact Page */
+
 import { useTheme } from '../utils/hooks/hooks'
 
+// Import Libraries
 import styled from 'styled-components'
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 
 
+// Keyframe for smooth reveal
 const reveal = keyframes`
   from {
     opacity: 0;
@@ -18,6 +22,7 @@ const reveal = keyframes`
 `;
 
 
+// Styled Components
 const StyledText = styled.p`
   color: ${({ theme }) => (theme === 'light' ? '#000000' : '#CCCCCC')};
 `
@@ -38,6 +43,7 @@ const StyledEmail = styled.textarea`
 `
 
 
+// JSX of the page
 export default function Contact() {
   const { theme } = useTheme();
 
@@ -45,6 +51,7 @@ export default function Contact() {
             <div className='contact' id='contact'>
                 <StyledText theme={theme} className='contact__text'>N'hésitez pas à me contacter pour toute question : <br/><span className='contact__text contact__text--gradient'>thomas.geslin31@gmail.com</span></StyledText>
 
+                {/* Contact Form */}
                 <form className='contact__form'>
                   <div className='contact__form__name'>
                     <div className='contact__form__name'>

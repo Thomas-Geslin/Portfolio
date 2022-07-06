@@ -1,7 +1,8 @@
 .homePresentation {
     display: flex;
     justify-content: space-between;  
-    margin-top: 330px;
+    margin: 330px 200px 200px 200px;
+    position: relative;
         &__text {
             font-size: 58px;
             font-weight: 700;
@@ -18,6 +19,11 @@
             position: absolute;
             z-index: -1;
             animation: reactSpin infinite linear 6s;
+                &--light {
+                    width: 25%;
+                    left: 145px;
+                    top: 25px;
+                }
         }
         &__picture {
             width: 45%;

@@ -1,14 +1,19 @@
+/** ModeSelector Component */
+
 import { useContext } from 'react'
 import { ThemeContext } from '../utils/context/context'
 
-import styled from 'styled-components'
+// Import Icons
 import { FiSun } from 'react-icons/fi';
 import { FiMoon } from 'react-icons/fi';
 
+// Import Libraries
+import styled from 'styled-components'
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 
 
+// Keyframe for smooth reveal
 const reveal = keyframes`
   from {
     opacity: 0;
@@ -20,7 +25,7 @@ const reveal = keyframes`
 `;
 
 
-
+// Styled Components
 const StyledButton = styled.button`
   background-color: ${({ theme }) => (theme === 'light' ? '#191919' : 'white')};
 `
@@ -43,6 +48,7 @@ const StyledText = styled.p`
 `
 
 
+// Function making the ModeSelector appear when clicking on the Icon
 function selectorAppearence() {
     const containerTranslate = () => {
         const container = document.getElementById('selectorContainer');
@@ -68,12 +74,15 @@ function selectorAppearence() {
 }
 
 
+// JSX of the page
 export default function DarkModeButton() {
     const { theme, setTheme } = useContext(ThemeContext)
 
     return(<div>
-                <StyledButton onClick={selectorAppearence} theme={theme} className='darkButton' id='selectorButton'>{theme === 'light' ? <Reveal keyframes={reveal} duration={2500} triggerOnce><FiSun color='white' fontSize={25} /></Reveal> : <Reveal keyframes={reveal} duration={2500} triggerOnce><FiMoon color='dark' fontSize={25} /></Reveal>}</StyledButton>
+                {/* Icon change depend on the mode */}
+                <StyledButton onClick={selectorAppearence} theme={theme} className='darkButton' id='selectorButton'>{theme === 'light' ? <Reveal keyframes={reveal} duration={2500} triggerOnce><FiSun color='white' fontSize={25} className='darkButton--sun' /></Reveal> : <Reveal keyframes={reveal} duration={2500} triggerOnce><FiMoon color='dark' fontSize={25} className='darkButton--moon' /></Reveal>}</StyledButton>
 
+                {/* ModeSelector */}
                 <StyledContainer theme={theme} className='modeSelector' id='selectorContainer'>
                     <StyledTitle theme={theme} className='modeSelector__title'>Select Mode</StyledTitle>
 

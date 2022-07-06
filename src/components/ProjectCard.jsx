@@ -1,12 +1,15 @@
-// import link from '../assets/link-chain.png'
+/** ProjectCard Component */
+
 import github from '../assets/github.png'
 
 import { useTheme } from '../utils/hooks/hooks'
 
+// Import Libraries
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 
+// Styled Components
 const StyledContainer = styled.h2`
   background-color: ${({ theme }) => (theme === 'light' ? '#ffffff' : '#363636')};
   box-shadow: ${({ theme }) => (theme === 'light' ? '1px 8px 29px 0px grey' : 'none')};
@@ -25,7 +28,7 @@ const ProjectStack = styled.p`
 `
 
 
-
+// JXS of the Cards
 export default function ProjectCard({ picture, title, description, techStack, githubLink }) {
     const { theme } = useTheme();
 
@@ -36,11 +39,6 @@ export default function ProjectCard({ picture, title, description, techStack, gi
                 <ProjectStack theme={theme} className='projectCard__stack'>Tech Stack : <span className='projectCard__stack--lighter'>{techStack}</span></ProjectStack>
 
                 <div className='projectCard__links'>
-                    {/* <div className='projectCard__links__part'>
-                        <img src={link} alt='logo de lien sortant' className='projectCard__links__part__picture' />
-                        <a href={githubLink} className='projectCard__links__part__text'>Live Preview</a>
-                    </div> */}
-
                     <div className='projectCard__links__part'>
                         <img src={github} alt='logo de Github' className='projectCard__links__part__picture' />
                         <a href={githubLink} className='projectCard__links__part__text'>View Code</a>
@@ -49,6 +47,7 @@ export default function ProjectCard({ picture, title, description, techStack, gi
             </StyledContainer>)
 }
 
+// Prop Types
 ProjectCard.propTypes = {
     picture: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,

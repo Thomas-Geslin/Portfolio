@@ -19,7 +19,7 @@ html {
  * Remove the margin in all browsers.
  */
 body {
-  margin: 0 200px 0 200px;
+  margin: 0;
   font-family: "Trebuchet MS";
 }
 
@@ -358,6 +358,14 @@ template {
     transform: rotate(360deg);
   }
 }
+@keyframes moonBalance {
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 .header {
   background-color: white;
   display: flex;
@@ -374,7 +382,7 @@ template {
 .header__nav {
   display: flex;
   justify-content: center;
-  width: 77%;
+  width: 16%;
 }
 .header__nav__part {
   font-family: "DM Sans", sans-serif;
@@ -400,10 +408,22 @@ template {
   z-index: 1000;
 }
 
+.onscrollDark {
+  position: fixed;
+  right: 0;
+  left: 0;
+  background-color: white;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 1px 4px black;
+  transition: 0.5s;
+  z-index: 1000;
+}
+
 .homePresentation {
   display: flex;
   justify-content: space-between;
-  margin-top: 330px;
+  margin: 330px 200px 200px 200px;
+  position: relative;
 }
 .homePresentation__text {
   font-size: 58px;
@@ -422,6 +442,11 @@ template {
   z-index: -1;
   animation: reactSpin infinite linear 6s;
 }
+.homePresentation__background--light {
+  width: 25%;
+  left: 145px;
+  top: 25px;
+}
 .homePresentation__picture {
   width: 45%;
   height: auto;
@@ -429,8 +454,8 @@ template {
 
 .homeTechStack {
   text-align: center;
-  margin-top: 300px;
   font-family: "Poppins", sans-serif;
+  margin: 150px 200px 0 200px;
 }
 .homeTechStack__title {
   color: #42446E;
@@ -457,7 +482,7 @@ template {
 .homeProjects {
   text-align: center;
   font-family: "Poppins", sans-serif;
-  margin-bottom: 200px;
+  margin: 150px 200px 200px 200px;
 }
 .homeProjects__title {
   color: #42446E;
@@ -539,10 +564,22 @@ template {
   font-size: 18px;
 }
 
+.divide {
+  background-color: white;
+}
+.divide__text {
+  font-family: "Poppins";
+  color: white;
+  font-size: 35px;
+  text-align: center;
+  padding: 60px 0;
+  position: relative;
+}
+
 .contact {
   text-align: center;
   font-family: "DM Sans", sans-serif;
-  margin-top: 250px;
+  margin: 150px 200px 0 200px;
 }
 .contact__text {
   color: #1E0E62;
@@ -623,19 +660,35 @@ template {
 
 .about {
   text-align: center;
-  margin-top: 150px;
+  margin: 150px 200px 200px 200px;
+  font-family: "Poppins", sans-serif;
 }
-.about__text {
+.about__title {
   font-family: "DM Sans", sans-serif;
   color: #1E0E62;
   font-size: 50px;
   font-weight: 700;
-  margin-bottom: 50px;
-}
-.about__picture {
-  box-shadow: 0px 8px 18px 6px #474747;
-  border-radius: 20px;
   margin-bottom: 150px;
+}
+.about__container {
+  display: flex;
+  justify-content: space-between;
+}
+.about__container__picture {
+  width: 30%;
+  max-height: 190px;
+  align-self: center;
+}
+.about__container__description {
+  width: 33%;
+  color: #666666;
+}
+.about__container__description__title {
+  font-size: 32px;
+}
+.about__container__description__text {
+  font-size: 19px;
+  line-height: 25px;
 }
 
 .darkButton {
@@ -650,6 +703,12 @@ template {
 .darkButton:hover {
   cursor: pointer;
 }
+.darkButton--sun {
+  animation: reactSpin linear 5s infinite;
+}
+.darkButton--moon {
+  animation: moonBalance linear 3s infinite;
+}
 
 .modeSelector {
   font-family: "Poppins", sans-serif;
@@ -661,6 +720,7 @@ template {
   left: -287px;
   width: 15%;
   transition: 0.5s;
+  z-index: 10;
 }
 .modeSelector__title {
   width: 50%;
@@ -700,11 +760,10 @@ template {
   justify-content: space-between;
   border-top: #666666 solid 2px;
   padding-top: 50px;
-  margin-bottom: 50px;
+  margin: 0 200px 50px 200px;
 }
 .footer__picture {
-  width: 100px;
-  height: 60px;
+  width: 5%;
 }
 .footer__contact {
   display: flex;

@@ -4,10 +4,9 @@
     justify-content: space-between;
     border-top: #666666 solid 2px;
     padding-top: 50px;
-    margin-bottom: 50px;
+    margin: 0 200px 50px 200px;
         &__picture {
-            width: 100px;
-            height: 60px;
+            width: 5%;
         }
         &__contact {
             display: flex;

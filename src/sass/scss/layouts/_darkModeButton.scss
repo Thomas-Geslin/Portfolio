@@ -9,6 +9,12 @@
         &:hover {
             cursor: pointer;
         }
+        &--sun {
+            animation: reactSpin linear 5s infinite;
+        }
+        &--moon {
+            animation: moonBalance linear 3s infinite;
+        }
 }
 
 .modeSelector {
@@ -21,6 +27,7 @@
     left: -287px;
     width: 15%;
     transition: .5s;
+    z-index: 10;
         &__title {
             width: 50%;
             margin: auto;

@@ -1,3 +1,5 @@
+/** Context for the Mode selection */
+
 import { createContext, useState } from "react";
 
 export const ThemeContext = createContext()
