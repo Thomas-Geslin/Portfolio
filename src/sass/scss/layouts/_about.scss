@@ -4,7 +4,6 @@
     font-family: 'Poppins', sans-serif;
         &__title {
             font-family: 'DM Sans', sans-serif;
-            color: #1E0E62;
             font-size: 50px;
             font-weight: 700;
             margin-bottom: 150px;
@@ -13,19 +12,24 @@
             display: flex;
             justify-content: space-between;
                 &__picture {
-                    width: 30%;
                     max-height: 190px;
                     align-self: center;
                 }
                 &__description {
-                    width: 33%;
+                    width: 85%;
                     color: $secondary-text-color;
+                    margin: auto;
                         &__title {
                             font-size: 32px;
+                            color: #CCCCCC;
                         }
                         &__text {
                             font-size: 19px;
                             line-height: 25px;
+                            color: #CCCCCC;
+                        }
+                        &--second {
+                            align-self: center;
                         }
                 }
         }  

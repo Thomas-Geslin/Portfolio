@@ -22,10 +22,36 @@
                 &__name {
                     display: flex;
                     justify-content: space-between;
-                    width: 88%;
+                    width: 80%;
+                        &__div {
+                            display: flex;
+                            flex-direction: column;
+                            width: 40%;
+                                &__input {
+                                    margin-bottom: 10px;
+                                    background-color: transparent;
+                                    border: none;
+                                    border-bottom: 1px solid white;
+                                    color: white;
+                                    outline: none;
+                                    padding-left: 5px;
+                                    padding-bottom: 5px;
+                                        &::placeholder {
+                                            color: white;
+                                        }
+                                }
+                                &__error {
+                                    color: red;
+                                    margin-bottom: 40px;
+                                }
+                        }
+                }
+                &__email {
+                    width: 80%;
+                    display: flex;
+                    flex-direction: column;
                         &__input {
-                            width: 80%;
-                            margin-bottom: 40px;
+                            margin-bottom: 10px;
                             background-color: transparent;
                             border: none;
                             border-bottom: 1px solid white;
@@ -37,28 +63,15 @@
                                     color: white;
                                 }
                         }
-                }
-                &__email {
-                    width: 80%;
-                    display: flex;
-                    flex-direction: column;
-                        &__input {
+                        &__error {
+                            color: red;
                             margin-bottom: 40px;
-                            background-color: transparent;
-                            border: none;
-                            border-bottom: 1px solid white;
-                            color: white;
-                            outline: none;
-                            padding-left: 5px;
-                            padding-bottom: 5px;
-                                &::placeholder {
-                                    color: white;
-                                }
-                    }
+                        }
                 }
                 &__message {
                     display: flex;
                     flex-direction: column;
+                    position: relative;
                         &__input {
                             color: white;
                             width: 40%;
@@ -70,9 +83,17 @@
                                     color: white;
                                 }
                         }
+                        &__advert {
+                            font-size: 10px;
+                            color: $secondary-text-color;
+                            position: absolute;
+                            bottom: 35px;
+                            left: 445px;
+                        }
                 }
                 &__submit {
                     margin-bottom: 100px;
+                    padding: 10px;
                         &:hover {
                             cursor: pointer;
                         }

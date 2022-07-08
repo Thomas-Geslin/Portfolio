@@ -67,11 +67,11 @@ export default function Header() {
               <Reveal keyframes={revealTop} duration={2500} triggerOnce className='header__picture'>{theme === 'dark' ? <img src={logoWhite} alt='Logo du Portfolio' className='header__picture' />
                                                                                                                       : <img src={logo} alt='Logo du Portfolio' className='header__picture' />}</Reveal>                                                                                                                    
               <Reveal keyframes={revealTop} duration={2500} triggerOnce className='header__nav' id='header'>
-                  <StyledText to='home' smooth={true} offset={-335} theme={theme} className='header__nav__part'>Home</StyledText>
-                  <StyledText to='stacks' smooth={true} offset={-130} theme={theme} className='header__nav__part'>Tech Stack</StyledText>
-                  <StyledText to='projects' smooth={true} offset={-130} theme={theme} className='header__nav__part'>Projets</StyledText>
-                  <StyledText to='about' smooth={true} offset={-130} theme={theme} className='header__nav__part'>À propos</StyledText>
-                  <StyledText to='contact' smooth={true} offset={-130} theme={theme} className='header__nav__part'>Contact</StyledText>
+                  <StyledText to='home' duration={2000} smooth={true} offset={-335} theme={theme} className='header__nav__part'>Home</StyledText>
+                  <StyledText to='stacks' duration={2000} smooth={true} offset={-200} theme={theme} className='header__nav__part'>Tech Stack</StyledText>
+                  <StyledText to='projects' duration={2000} smooth={true} offset={-200} theme={theme} className='header__nav__part'>Projets</StyledText>
+                  <StyledText to='about' duration={2000} smooth={true} offset={-200} theme={theme} className='header__nav__part'>À propos</StyledText>
+                  <StyledText to='contact' duration={2000} smooth={true} offset={-200} theme={theme} className='header__nav__part'>Contact</StyledText>
               </Reveal>
           </StyledHeader>)
 }

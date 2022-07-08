@@ -576,6 +576,43 @@ template {
   position: relative;
 }
 
+.about {
+  text-align: center;
+  margin: 150px 200px 200px 200px;
+  font-family: "Poppins", sans-serif;
+}
+.about__title {
+  font-family: "DM Sans", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 150px;
+}
+.about__container {
+  display: flex;
+  justify-content: space-between;
+}
+.about__container__picture {
+  max-height: 190px;
+  align-self: center;
+}
+.about__container__description {
+  width: 85%;
+  color: #666666;
+  margin: auto;
+}
+.about__container__description__title {
+  font-size: 32px;
+  color: #CCCCCC;
+}
+.about__container__description__text {
+  font-size: 19px;
+  line-height: 25px;
+  color: #CCCCCC;
+}
+.about__container__description--second {
+  align-self: center;
+}
+
 .contact {
   text-align: center;
   font-family: "DM Sans", sans-serif;
@@ -602,11 +639,15 @@ template {
 .contact__form__name {
   display: flex;
   justify-content: space-between;
-  width: 88%;
-}
-.contact__form__name__input {
   width: 80%;
-  margin-bottom: 40px;
+}
+.contact__form__name__div {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.contact__form__name__div__input {
+  margin-bottom: 10px;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid white;
@@ -615,8 +656,12 @@ template {
   padding-left: 5px;
   padding-bottom: 5px;
 }
-.contact__form__name__input::placeholder {
+.contact__form__name__div__input::placeholder {
   color: white;
+}
+.contact__form__name__div__error {
+  color: red;
+  margin-bottom: 40px;
 }
 .contact__form__email {
   width: 80%;
@@ -624,7 +669,7 @@ template {
   flex-direction: column;
 }
 .contact__form__email__input {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid white;
@@ -636,9 +681,14 @@ template {
 .contact__form__email__input::placeholder {
   color: white;
 }
+.contact__form__email__error {
+  color: red;
+  margin-bottom: 40px;
+}
 .contact__form__message {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .contact__form__message__input {
   color: white;
@@ -651,44 +701,19 @@ template {
 .contact__form__message__input::placeholder {
   color: white;
 }
+.contact__form__message__advert {
+  font-size: 10px;
+  color: #666666;
+  position: absolute;
+  bottom: 35px;
+  left: 445px;
+}
 .contact__form__submit {
   margin-bottom: 100px;
+  padding: 10px;
 }
 .contact__form__submit:hover {
   cursor: pointer;
-}
-
-.about {
-  text-align: center;
-  margin: 150px 200px 200px 200px;
-  font-family: "Poppins", sans-serif;
-}
-.about__title {
-  font-family: "DM Sans", sans-serif;
-  color: #1E0E62;
-  font-size: 50px;
-  font-weight: 700;
-  margin-bottom: 150px;
-}
-.about__container {
-  display: flex;
-  justify-content: space-between;
-}
-.about__container__picture {
-  width: 30%;
-  max-height: 190px;
-  align-self: center;
-}
-.about__container__description {
-  width: 33%;
-  color: #666666;
-}
-.about__container__description__title {
-  font-size: 32px;
-}
-.about__container__description__text {
-  font-size: 19px;
-  line-height: 25px;
 }
 
 .darkButton {
