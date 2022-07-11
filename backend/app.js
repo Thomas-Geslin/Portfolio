@@ -1,9 +1,12 @@
 const express = require('express');
+const helmet = require('helmet');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
 const app = express();
+
 app.use(express.json());
+app.use(helmet());
 
 /* Fonction pemrettant de désactiver la sécurité CORS */
 app.use((req, res, next) => {
@@ -14,12 +17,17 @@ app.use((req, res, next) => {
     next();
 });
 
+
+/* Fonction permettant d'envoyer un mail à partir des infos du formulaire de contact */
 app.post('/', (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
             user: process.env.MAIL_USER_ID,
-            pass: process.env.MAIL_USER_MDP
+            pass: process.env.MAIL_USER_MDP,
+            clientId: process.env.OAUTH_CLIENTID,
+            clientSecret: process.env.OAUTH_CLIENT_SECRET,
+            refreshToken: process.env.OAUTH_REFRESH_TOKEN
         },
         tls: {
             rejectUnauthorized: false
@@ -30,14 +38,16 @@ app.post('/', (req, res) => {
         from: req.body.email,
         to: process.env.MAIL_USER_ID,
         subject: `Message from ${req.body.email}`,
-        text: req.body.firstName + ' ' + req.body.lastName + ',' + req.body.message
+        text: req.body.firstName + ' ' + req.body.lastName + ', ' + req.body.message
     }
 
     transporter.sendMail(mailOptions, (err, info) => {
         if(err) {
             console.log(err);
+            res.status(400).send()
         } else {
             console.log(info.response);
+            res.status(200).send()
         }
     })
 })
