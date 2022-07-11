@@ -459,12 +459,14 @@ template {
 }
 @media (max-width: 600px) {
   .header__nav {
-    padding: 300px 29% 300px 29%;
+    height: 450px;
+    padding: 180px 29% 400px 29%;
   }
 }
 @media (max-width: 475px) {
   .header__nav {
-    padding: 300px 31% 300px 31%;
+    height: 400px;
+    padding: 150px 31% 500px 31%;
   }
 }
 
