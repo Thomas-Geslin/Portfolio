@@ -3,7 +3,7 @@
     border-radius: 0 10px 10px 0;
     position: fixed;
     left: 0;
-    top: 300px;
+    top: 25%;
     padding: 20px;
     transition: .5s;
         &:hover {
@@ -23,9 +23,9 @@
     border-radius: 0 0 10px 0;
     text-align: center;
     position: fixed;
-    top: 300px;
-    left: -287px;
-    width: 15%;
+    top: 25%;
+    left: -280px;
+    width: 280px;
     transition: .5s;
     z-index: 10;
         &__title {
@@ -58,5 +58,40 @@
 }
 
 .buttonAppear {
-    left: 285px;
+    left: 280px;
+}
+
+@media (max-width: $tablet-breakpoint) {
+    .darkButton {
+        top: 17%;
+        padding: 15px;
+            &--moon {
+                font-size: 20px;
+            }
+            &--sun {
+                font-size: 20px;
+            }
+    }
+
+    .modeSelector {
+        top: 17%;
+        width: 180px;
+        left: -180px;
+            &__switch {
+                flex-direction: column;
+                    &__mode {
+                        width: 100px;
+                        margin: auto;
+                        margin-bottom: 20px;
+                    }
+            }
+    }
+
+    .containerAppear {
+        left: 0;
+    }
+
+    .buttonAppear {
+        left: 180px;
+    }
 }

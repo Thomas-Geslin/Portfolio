@@ -1,11 +1,59 @@
 .divide {
     background-color: white;
+    height: 205px;
         &__text {
-            font-family: 'Poppins';
+            font-family: 'Ubuntu', sans-serif;
             color: white;
-            font-size: 35px;
+            font-size: 40px;
             text-align: center;
-            padding: 60px 0;
+            padding: 40px 0;
             position: relative;
         }
+
+    @media (max-width: 1200px) {
+        height: 185px;
+            &__text {
+                font-size: 35px;
+            }
+    }
+    @media (max-width: 970px) {
+        height: 165px;
+            &__text {
+                font-size: 30px;
+            }
+    }
+    @media (max-width: 820px) {
+        height: 145px;
+            &__text {
+                font-size: 25px;
+            }
+    }
+    @media (max-width: 670px) {
+        height: 85px;
+            &__text {
+                font-size: 20px;
+                padding: 10px;
+            }
+    }
+    @media (max-width: 540px) {
+        height: 100px;
+            &__text {
+                font-size: 20px;
+                padding: 7px;
+            }
+            &--second {
+                height: 80px;
+            }
+            &--third {
+                height: 80px;
+            }
+            &--fourth {
+                height: 80px;
+            }
+    }
+    @media (max-width: 340px) {
+            &--second {
+                height: 100px;
+            }
+    }
 }

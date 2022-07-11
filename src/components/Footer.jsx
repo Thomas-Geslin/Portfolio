@@ -3,9 +3,8 @@
 // Import Pictures
 import logo from '../assets/logo.png'
 import logoWhite from '../assets/logo-white.png'
-import twitter from '../assets/twitter.png'
 import github from '../assets/small-github.png'
-import linkedin from '../assets/linkedin.png'
+import linkedin from '../assets/fiverr.png'
 
 import { useTheme } from '../utils/hooks/hooks'
 
@@ -47,12 +46,11 @@ export default function Footer() {
 
                 <div className='footer__contact'>
                     <StyledText theme={theme} className='footer__contact__text'>+33 7 78 90 23 86</StyledText>
-                    <StyledText theme={theme} className='footer__contact__text'>thomas.geslin31@gmail.com</StyledText>
+                    <StyledText theme={theme} className='footer__contact__text'>contact.thomasgsl@gmail.com</StyledText>
                     
                     <div className='footer__contact__logo'>
-                        <img src={twitter} alt="logo de twitter" className='footer__contact__logo__part' />
-                        <img src={github} alt="logo de github" className='footer__contact__logo__part' />
-                        <img src={linkedin} alt="logo de linkedin" className='footer__contact__logo__part' />
+                        <a href='https://github.com/Thomas-Geslin' target='_blank' rel='noreferrer'><img src={github} alt="logo de github" className='footer__contact__logo__part' /></a>
+                        <a href='https://fr.fiverr.com/thomas_geslin/do-modern-and-responsive-frontend-web-development' target='_blank' rel='noreferrer'><img src={linkedin} alt="logo de linkedin" className='footer__contact__logo__part' /></a>
                     </div>
                 </div>
             </footer>

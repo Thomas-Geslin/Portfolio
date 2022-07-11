@@ -1,7 +1,7 @@
 .homeProjects {
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    margin: 150px 200px 200px 200px;
+    margin: 150px 10% 200px 10%;
         &__title {
             color: $primary-text-color;
             font-size: 48px;
@@ -19,4 +19,20 @@
             grid-column-gap: 0px;
             grid-row-gap: 70px;
         }
+    
+    @media (max-width: 1400px) {
+        margin: 150px 5% 150px 5%;
+    }
+    @media (max-width: 1250px) {
+        &__grid {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+    }
+    @media (max-width: 870px) {
+        &__grid {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+        }
+    }
 }

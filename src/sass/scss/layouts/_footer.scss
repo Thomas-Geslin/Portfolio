@@ -4,15 +4,17 @@
     justify-content: space-between;
     border-top: #666666 solid 2px;
     padding-top: 50px;
-    margin: 0 200px 50px 200px;
+    margin: 0 10% 50px 10%;
         &__picture {
             width: 5%;
+            min-width: 70px;
         }
         &__contact {
             display: flex;
             align-items: center;
             justify-content: space-between;
             width: 50%;
+            min-width: 660px;
                 &__text {
                     color: $primary-text-color;
                     font-size: 18px;
@@ -25,4 +27,43 @@
                     }
                 }
         }
+
+    @media (max-width: $desktop-breakpoint) {
+        &__contact {
+            min-width: 550px;
+                &__text {
+                    font-size: 16px;
+                }
+        }
+    }
+    @media (max-width: 850px) {
+        &__contact {
+            min-width: 500px;
+                &__text {
+                    font-size: 14px;
+                }
+        }
+    }
+    @media (max-width: $tablet-breakpoint) {
+        flex-direction: column-reverse;
+            &__contact {
+                flex-direction: column;
+                min-width: 150px;
+                    &__text {
+                        font-size: 16px;
+                        margin-bottom: 30px;
+                    }
+                    &__logo {
+                        margin-top: 10px;
+                        margin-bottom: 25px;
+                        display: flex;
+                        justify-content: space-between;
+                        width: 20%;
+                        min-width: 100px;
+                            &__part {
+                                margin: 0;
+                            }
+                    }
+            }
+    }
 }

@@ -1,6 +1,6 @@
 .about {
     text-align: center;
-    margin: 150px 200px 200px 200px;
+    margin: 150px 10% 200px 10%;
     font-family: 'Poppins', sans-serif;
         &__title {
             font-family: 'DM Sans', sans-serif;
@@ -32,5 +32,46 @@
                             align-self: center;
                         }
                 }
-        }  
+        } 
+        
+    @media (max-width: $desktop-breakpoint) {
+        &__title {
+            margin-bottom: 60px;
+        }
+        &__container {
+            flex-direction: column;
+                &__picture {
+                    margin-top: 40px;
+                    margin-bottom: 100px;
+                }
+        }
+    }
+    @media (max-width: 500px) {
+        &__container {
+                &__picture {
+                    width: 450px;
+                }
+        }
+    }
+    @media (max-width: 450px) {
+        &__container {
+                &__picture {
+                    width: 400px;
+                }
+        }
+    }
+    @media (max-width: 400px) {
+        &__container {
+                &__picture {
+                    width: 350px;
+                }
+        }
+    }
+    @media (max-width: 350px) {
+        &__container {
+                &__picture {
+                    width: 300px;
+                }
+        }
+    }
 }

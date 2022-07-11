@@ -9,7 +9,7 @@ import GlobalStyle from './utils/style/GlobalStyle';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
-import FirstDivide from './components/Divide/FirstDivide';
+import Divide from './components/Divide/FourthDivide';
 import About from './pages/About';
 import Footer from './components/Footer';
 import DarkModeButton from './components/DarkModeButton';
@@ -24,7 +24,7 @@ import './sass/css/style.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <div>
+  <React.StrictMode>
     <ThemeProvider> 
     <ParallaxProvider>
       <GlobalStyle />
@@ -32,12 +32,12 @@ root.render(
         <Header />
         <Home />
         <About />
-        <FirstDivide />
+        <Divide />
         <Contact />
         <Footer />
         <DarkModeButton />
       
     </ParallaxProvider> 
     </ThemeProvider>
-  </div>
+    </React.StrictMode>
 );

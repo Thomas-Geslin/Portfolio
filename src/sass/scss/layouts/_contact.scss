@@ -1,24 +1,57 @@
 .contact {
     text-align: center;
     font-family: 'DM Sans', sans-serif;
-    margin: 150px 200px 0 200px;
+    margin: 150px 10% 0 10%;
         &__text {
             color: #1E0E62;
             font-size: 50px;
             font-weight: 700;
             line-height: 70px;
             margin-bottom: 100px;
+            width: auto;
                 &--gradient {
                     background: linear-gradient(60deg, #13B0F5, #E70FAA);
                     background-clip: text;
                     color: transparent;
+                    width: 20%;
+                }
+                @media (min-width: 925px) and (max-width: $desktop-breakpoint) {
+                    font-size: 45px;
+                    line-height: 60px;
+                }
+                @media (min-width: 825px) and (max-width: 924px) {
+                    font-size: 40px;
+                    line-height: 50px;
+                }
+                @media (min-width: 769px) and (max-width: 824px) {
+                    font-size: 35px;
+                    line-height: 45px;
+                }
+                @media (max-width: $tablet-breakpoint) {
+                    font-size: 30px;
+                    line-height: 40px;
+                }
+                @media (max-width: 550px) {
+                    font-size: 25px;
+                    line-height: 35px;
+                    margin-bottom: 70px;
+                }
+                @media (max-width: 450px) {
+                    margin-bottom: 50px;
+                        &--gradient {
+                            font-size: 20px;
+                        }
+                }
+                @media (max-width: 450px) {
+                        font-size: 18px;
+                        line-height: 25px;
                 }
         }
         &__form {
             font-family: 'Poppins', sans-serif;
             color: white;
             text-align: left;
-            margin-left: 200px;
+            margin-left: 10%;
                 &__name {
                     display: flex;
                     justify-content: space-between;
@@ -70,7 +103,6 @@
                 }
                 &__message {
                     display: flex;
-                    flex-direction: column;
                     position: relative;
                         &__input {
                             color: white;
@@ -79,6 +111,7 @@
                             padding-left: 10px;
                             padding-top: 10px;
                             background-color: transparent;
+                            min-width: 560px;
                                 &::placeholder {
                                     color: white;
                                 }
@@ -88,7 +121,8 @@
                             color: $secondary-text-color;
                             position: absolute;
                             bottom: 35px;
-                            left: 445px;
+                            left: 480px;
+                            min-width: 82px;
                         }
                 }
                 &__submit {
@@ -99,4 +133,27 @@
                         }
                 }
         }
+
+    @media (max-width: $tablet-breakpoint) {
+        &__form {
+            &__message {
+                &__input {
+                    min-width: 80%;
+                }
+                &__advert {
+                    left: 5px;
+                }
+            }
+        }
+    }
+    @media (max-width: 520px) {
+        &__form {
+            &__name {
+                flex-direction: column;
+                    &__div {
+                        width: 70%;
+                    }
+            }
+        }
+    }
 }

@@ -1,7 +1,7 @@
 .homeTechStack {
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    margin: 150px 200px 0 200px;
+    margin: 150px 10% 0 10%;
         &__title {
             color: $primary-text-color;
             font-size: 48px;
@@ -23,4 +23,28 @@
                     justify-self: center;
                 }
         }
+
+    @media (max-width: $desktop-breakpoint) {
+        &__grid {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+        }
+    }
+    @media (max-width: 500px) {
+        margin-top: 100px;
+            &__title {
+                font-size: 40px;
+            }
+            &__text {
+                font-size: 22px;
+            }
+            &__grid {
+                grid-row-gap: 60px;
+                margin-bottom: 120px;
+                    &__icon {
+                        width: 50%;
+                        min-width: 90px;
+                    }
+            }
+    }
 }
