@@ -1095,9 +1095,12 @@ template {
   width: 50%;
   margin: auto;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid lightgrey;
+}
+.modeSelector__title--language {
+  width: 70%;
 }
 .modeSelector__switch {
   display: flex;

@@ -13,3 +13,16 @@ export const ThemeProvider = ({ children }) => {
         </ThemeContext.Provider>
     )
 }
+
+
+export const LanguageContext = createContext()
+
+export const LanguageProvider = ({ children }) => {
+    const [language, setLanguage] = useState('french')
+ 
+    return (
+        <LanguageContext.Provider value={{ language, setLanguage }}>
+            {children}
+        </LanguageContext.Provider>
+    )
+}

@@ -9,7 +9,7 @@ import shiny from '../../assets/shiny-project.png'
 import kanap from '../../assets/kanap-project.png'
 import groupomania from '../../assets/groupomania-project.png'
 
-import { useTheme } from '../../utils/hooks/hooks'
+import { useTheme, useLanguage } from '../../utils/hooks/hooks'
 
 // Import Libraries
 import styled from 'styled-components'
@@ -53,7 +53,7 @@ const projectsList = [
     {
         picture: ohmyfood,
         title: 'Ohmyfood',
-        description: "Réalisation du front-end d'un site de réservation de plats chez des restaurants. Avec des animations réalisées en CSS.",
+        description: "Réalisation du front-end dynamique d'un site de réservation de plats chez des restaurants. Avec des animations réalisées en CSS.",
         techStack:'HTML, CSS, Sass',
         githubLink: 'https://github.com/Thomas-Geslin/OC-ProjetN2-Ohmyfood'
     },
@@ -74,7 +74,7 @@ const projectsList = [
     {
         picture: kanap,
         title: 'Kanap',
-        description: "Réalisation du lien entre le front-end et le back-end d'un site e-commerce, à l'aide de JavaScript pur (sans framework).",
+        description: "Réalisation du lien entre le front-end et l'API d'un site e-commerce. Pour intégrer de manière dynamique des élements dans les différentes pages.",
         techStack:'JavaScript',
         githubLink: 'https://github.com/Thomas-Geslin/OC-ProjetN4-Kanap'
     },
@@ -91,10 +91,17 @@ const projectsList = [
 // JSX of the page
 export default function HomeProjects() {
     const { theme } = useTheme();
+    const { language } = useLanguage();
 
     return(<div className="homeProjects" id="projects">
-                <Reveal keyframes={reveal} triggerOnce duration={2500}><StyledTitle theme={theme} className="homeProjects__title">Projets</StyledTitle></Reveal>
-                <Reveal keyframes={reveal} triggerOnce duration={2500}><StyledSubtitle theme={theme} className="homeProjects__text">Quelques-uns des projets que j'ai réalisé jusqu'à présent</StyledSubtitle></Reveal>
+                {language==='french'
+                    ? <Reveal keyframes={reveal} triggerOnce duration={2500}><StyledTitle theme={theme} className="homeProjects__title">Projets</StyledTitle></Reveal>
+                    : <Reveal keyframes={reveal} triggerOnce duration={2500}><StyledTitle theme={theme} className="homeProjects__title">Projects</StyledTitle></Reveal>
+                }
+                {language==='french'
+                    ? <Reveal keyframes={reveal} triggerOnce duration={2500}><StyledSubtitle theme={theme} className="homeProjects__text">Quelques-uns des projets que j'ai réalisé jusqu'à présent</StyledSubtitle></Reveal>
+                    : <Reveal keyframes={reveal} triggerOnce duration={2500}><StyledSubtitle theme={theme} className="homeProjects__text">Some of the projects I have done so far</StyledSubtitle></Reveal>
+                }
 
                 <div className="homeProjects__grid">
                     {/* Create a card for each project */}

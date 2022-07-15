@@ -68,7 +68,10 @@ export default function HomePresentation() {
   return(<Reveal keyframes={reveal} duration={2500} triggerOnce>
          <div className='homePresentation' id='home'>
               <StyledText theme={theme} className='homePresentation__text' id='autotext'></StyledText>
-              {theme === 'dark' ? <img src={background} alt='profil' className='homePresentation__background' /> : <img src={backgroundLight} alt='profil' className='homePresentation__background homePresentation__background--light' />}
+              {theme === 'dark' 
+                ? <img src={background} alt='profil' className='homePresentation__background' /> 
+                : <img src={backgroundLight} alt='profil' className='homePresentation__background homePresentation__background--light' />
+              }
               <img src={presentation} alt='zz' className='homePresentation__picture' />
           </div>
           </Reveal>)

@@ -15,7 +15,7 @@ import Footer from './components/Footer';
 import DarkModeButton from './components/DarkModeButton';
 
 // Context for DarkMode/Parallax Effect
-import { ThemeProvider } from './utils/context/context';
+import { LanguageProvider, ThemeProvider } from './utils/context/context';
 import { ParallaxProvider } from 'react-scroll-parallax';
 
 // CSS Style
@@ -25,7 +25,8 @@ import './sass/css/style.css'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ThemeProvider> 
+    <ThemeProvider>
+    <LanguageProvider> 
     <ParallaxProvider>
       <GlobalStyle />
 
@@ -38,6 +39,7 @@ root.render(
         <DarkModeButton />
       
     </ParallaxProvider> 
+    </LanguageProvider>
     </ThemeProvider>
     </React.StrictMode>
 );

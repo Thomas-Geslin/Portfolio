@@ -12,7 +12,7 @@ import vueLogo from '../../assets/vue.png'
 import nodeLogo from '../../assets/node.png'
 import dockerLogo from '../../assets/docker.png'
 
-import { useTheme } from '../../utils/hooks/hooks'
+import { useTheme, useLanguage } from '../../utils/hooks/hooks'
 
 // Import Libraries
 import styled from 'styled-components'
@@ -47,10 +47,17 @@ const StyledSubtitle = styled.p`
 // JSX of the page
 export default function HomeTechStack() {
   const { theme } = useTheme();
+  const { language } = useLanguage();
 
     return(<div className='homeTechStack' id='stacks'>
-                <Reveal keyframes={reveal} triggerOnce duration={2500}><StyledTitle theme={theme} className='homeTechStack__title'>My Tech Stack</StyledTitle></Reveal>
-                <Reveal keyframes={reveal} triggerOnce duration={2500}><StyledSubtitle className='homeTechStack__text'>Technologies avec lesquelles j'aime travailler</StyledSubtitle></Reveal>
+                {language==='french' 
+                  ? <Reveal keyframes={reveal} triggerOnce duration={2500}><StyledTitle theme={theme} className='homeTechStack__title'>Technologies</StyledTitle></Reveal>
+                  : <Reveal keyframes={reveal} triggerOnce duration={2500}><StyledTitle theme={theme} className='homeTechStack__title'>My Tech Stack</StyledTitle></Reveal>
+                }
+                {language==='french'
+                  ? <Reveal keyframes={reveal} triggerOnce duration={2500}><StyledSubtitle className='homeTechStack__text'>Technologies avec lesquelles j'aime travailler</StyledSubtitle></Reveal>
+                  : <Reveal keyframes={reveal} triggerOnce duration={2500}><StyledSubtitle className='homeTechStack__text'>Technologies I like to work with</StyledSubtitle></Reveal>
+                }
 
                 <div className='homeTechStack__grid'>
                     <Reveal keyframes={reveal} triggerOnce duration={2500}><img src={htmlLogo} alt='Logo HTML' className='homeTechStack__grid__icon' /></Reveal>

@@ -3,7 +3,7 @@
 // Import Pictures
 import logo from '../assets/logo.png'
 import logoWhite from '../assets/logo-white.png'
-import { useTheme } from '../utils/hooks/hooks'
+import { useTheme, useLanguage } from '../utils/hooks/hooks'
 import { useState } from 'react'
 
 import { faBars } from '@fortawesome/free-solid-svg-icons'
@@ -47,7 +47,8 @@ const StyledIcon = styled(FontAwesomeIcon)`
 
 // JSX of the page  
 export default function Header() {
-  const { theme } = useTheme()
+  const { theme } = useTheme();
+  const { language } = useLanguage();
 
   // Function making the Header able to stay top of the page on scroll
   function fixedHeader() {
@@ -91,14 +92,25 @@ export default function Header() {
   return(<StyledHeader theme={theme} className='header' id='header'>
               {/* Color of the Logo depend on the mode */}
               <Reveal keyframes={revealTop} duration={2500} triggerOnce className='header__picture'>{theme === 'dark' ? <img src={logoWhite} alt='Logo du Portfolio' className='header__picture' />
-                                                                                                                      : <img src={logo} alt='Logo du Portfolio' className='header__picture' />}</Reveal>                                                                                                                    
-              <div id='headerNav' className='header__nav'><Reveal keyframes={revealTop} duration={2500} triggerOnce>
-                  <StyledText to='home' duration={2000} smooth={true} offset={-335} theme={theme} className='header__nav__part'>Home</StyledText>
-                  <StyledText to='stacks' duration={2000} smooth={true} offset={-200} theme={theme} className='header__nav__part'>Tech Stack</StyledText>
-                  <StyledText to='projects' duration={2000} smooth={true} offset={-200} theme={theme} className='header__nav__part'>Projets</StyledText>
-                  <StyledText to='about' duration={2000} smooth={true} offset={-200} theme={theme} className='header__nav__part'>À propos</StyledText>
-                  <StyledText to='contact' duration={2000} smooth={true} offset={-200} theme={theme} className='header__nav__part'>Contact</StyledText>
-              </Reveal></div>
+                                                                                                                      : <img src={logo} alt='Logo du Portfolio' className='header__picture' />}</Reveal>           
+                                                                                                                                                                                                                               
+              {language==='french' 
+                ? <div id='headerNav' className='header__nav'><Reveal keyframes={revealTop} duration={2500} triggerOnce>
+                    <StyledText to='home' duration={2000} smooth={true} offset={-335} theme={theme} className='header__nav__part'>Acceuil</StyledText>
+                    <StyledText to='stacks' duration={2000} smooth={true} offset={-200} theme={theme} className='header__nav__part'>Technologies</StyledText>
+                    <StyledText to='projects' duration={2000} smooth={true} offset={-200} theme={theme} className='header__nav__part'>Projets</StyledText>
+                    <StyledText to='about' duration={2000} smooth={true} offset={-200} theme={theme} className='header__nav__part'>À propos</StyledText>
+                    <StyledText to='contact' duration={2000} smooth={true} offset={-200} theme={theme} className='header__nav__part'>Contact</StyledText>
+                  </Reveal></div>
+
+                : <div id='headerNav' className='header__nav'><Reveal keyframes={revealTop} duration={2500} triggerOnce>
+                    <StyledText to='home' duration={2000} smooth={true} offset={-335} theme={theme} className='header__nav__part'>Home</StyledText>
+                    <StyledText to='stacks' duration={2000} smooth={true} offset={-200} theme={theme} className='header__nav__part'>Tech Stack</StyledText>
+                    <StyledText to='projects' duration={2000} smooth={true} offset={-200} theme={theme} className='header__nav__part'>Projects</StyledText>
+                    <StyledText to='about' duration={2000} smooth={true} offset={-200} theme={theme} className='header__nav__part'>About</StyledText>
+                    <StyledText to='contact' duration={2000} smooth={true} offset={-200} theme={theme} className='header__nav__part'>Contact</StyledText>
+                  </Reveal></div>
+              }
 
               <div onClick={menuAppearence} className='header__menu' id='menu'>{menuClose ? <StyledIcon theme={theme} icon={faBars} className='header__menu__icon'/> : <StyledIcon theme={theme} icon={faXmark} className='header__menu__icon'/>}</div>
           </StyledHeader>)

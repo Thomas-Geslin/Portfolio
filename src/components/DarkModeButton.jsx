@@ -1,7 +1,7 @@
 /** ModeSelector Component */
 
 import { useContext } from 'react'
-import { ThemeContext } from '../utils/context/context'
+import { ThemeContext, LanguageContext } from '../utils/context/context'
 
 // Import Icons
 import { FiSun } from 'react-icons/fi';
@@ -77,6 +77,7 @@ function selectorAppearence() {
 // JSX of the page
 export default function DarkModeButton() {
     const { theme, setTheme } = useContext(ThemeContext)
+    const { language, setLanguage } = useContext(LanguageContext)
 
     return(<div>
                 {/* Icon change depend on the mode */}
@@ -84,11 +85,22 @@ export default function DarkModeButton() {
 
                 {/* ModeSelector */}
                 <StyledContainer theme={theme} className='modeSelector' id='selectorContainer'>
-                    <StyledTitle theme={theme} className='modeSelector__title'>Select Mode</StyledTitle>
-
+                    {language==='french' 
+                      ? <StyledTitle theme={theme} className='modeSelector__title'>Sélection du style</StyledTitle> 
+                      : <StyledTitle theme={theme} className='modeSelector__title'>Select Mode</StyledTitle>
+                    }
                     <div className='modeSelector__switch'>
                         <StyledText theme={theme} className='modeSelector__switch__mode' onClick={() => setTheme('light')}>Light Mode</StyledText>
                         <StyledText theme={theme} className='modeSelector__switch__mode' onClick={() => setTheme('dark')}>Dark Mode</StyledText>
+                    </div>
+
+                    {language==='french' 
+                      ? <StyledTitle theme={theme} className='modeSelector__title modeSelector__title--language'>Sélection de la langue</StyledTitle> 
+                      : <StyledTitle theme={theme} className='modeSelector__title'>Select Language</StyledTitle>
+                    }
+                    <div className='modeSelector__switch'>
+                        <StyledText theme={theme} className='modeSelector__switch__mode' onClick={() => setLanguage('french')}>Français</StyledText>
+                        <StyledText theme={theme} className='modeSelector__switch__mode' onClick={() => setLanguage('english')}>English</StyledText>
                     </div>
                 </StyledContainer>
             </div>)
