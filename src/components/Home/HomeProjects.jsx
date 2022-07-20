@@ -46,7 +46,7 @@ const projectsList = [
     {
         picture: booki,
         title: 'Booki',
-        description: "Front-end d'un site de réservation de logements et de planification d'activités pour les vacances. Réalisé seulement en HTML ET CSS.",
+        description: "Front-end d'un site de réservation de logements et de planification d'activités pour les vacances. Réalisé seulement en HTML et CSS.",
         techStack:'HTML, CSS',
         githubLink: 'https://github.com/Thomas-Geslin/OC-ProjetN1-Booki'
     },
@@ -87,6 +87,51 @@ const projectsList = [
     }
 ]
 
+const projectsListEnglish = [
+    {
+        picture: booki,
+        title: 'Booki',
+        description: "Front-end of a website for booking accommodation and planning activities for the holidays. Done only in HTML and CSS.",
+        techStack:'HTML, CSS',
+        githubLink: 'https://github.com/Thomas-Geslin/OC-ProjetN1-Booki'
+    },
+    {
+        picture: ohmyfood,
+        title: 'Ohmyfood',
+        description: "Realization of the dynamic front-end of a website for reservate dishes at partners restaurants. With animations realized in CSS.",
+        techStack:'HTML, CSS, Sass',
+        githubLink: 'https://github.com/Thomas-Geslin/OC-ProjetN2-Ohmyfood'
+    },
+    {
+        picture: car,
+        title: 'Encar',
+        description: "Responsive and dynamic website of a luxury car dealership. With many animations made using JavaScript and CSS.",
+        techStack:'HTML, CSS, JavaScript',
+        githubLink: 'https://github.com/Thomas-Geslin/Car-Responsive-Website'
+    },
+    {
+        picture: shiny,
+        title: 'Shiny',
+        description: "Website allowing you to find the best freelancers that you need based on answers to a questionnaire. Made using ReactJS.",
+        techStack:'React, Sass',
+        githubLink: 'https://github.com/Thomas-Geslin/Shiny-Agence'
+    },
+    {
+        picture: kanap,
+        title: 'Kanap',
+        description: "Realization of the link between the front-end and the API of an e-commerce site. To dynamically insert elements into the different pages.",
+        techStack:'JavaScript',
+        githubLink: 'https://github.com/Thomas-Geslin/OC-ProjetN4-Kanap'
+    },
+    {
+        picture: groupomania,
+        title: 'Groupomania',
+        description: "Internal company forum, created entirely (Front-end + Back-end) with the VueJS framework as well as NodeJS for the back-end.",
+        techStack:'VueJS, NodeJS, MySQL',
+        githubLink: 'https://github.com/Thomas-Geslin/OC-ProjetN6-Groupomania'
+    }
+]
+
 
 // JSX of the page
 export default function HomeProjects() {
@@ -103,7 +148,8 @@ export default function HomeProjects() {
                     : <Reveal keyframes={reveal} triggerOnce duration={2500}><StyledSubtitle theme={theme} className="homeProjects__text">Some of the projects I have done so far</StyledSubtitle></Reveal>
                 }
 
-                <div className="homeProjects__grid">
+                {language==='french'
+                  ? <div className="homeProjects__grid">
                     {/* Create a card for each project */}
                     {projectsList.map((project, index) => (
                         <Reveal keyframes={reveal} triggerOnce duration={2500}><ProjectCard 
@@ -114,7 +160,20 @@ export default function HomeProjects() {
                             techStack={project.techStack}
                             githubLink={project.githubLink}
                         /></Reveal>
+                        ))}
+                    </div>
+                  : <div className="homeProjects__grid">
+                  {/* Create a card for each project */}
+                  {projectsListEnglish.map((project, index) => (
+                      <Reveal keyframes={reveal} triggerOnce duration={2500}><ProjectCard 
+                          key={`${project}-${index}`}
+                          picture={project.picture}
+                          title={project.title}
+                          description={project.description}
+                          techStack={project.techStack}
+                          githubLink={project.githubLink}
+                      /></Reveal>
                     ))}
-                </div>
+                </div>}
             </div>)
 }

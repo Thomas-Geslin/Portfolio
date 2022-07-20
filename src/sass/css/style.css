@@ -1117,6 +1117,10 @@ template {
   color: white;
   background-color: black;
 }
+.modeSelector__switch--language {
+  margin-right: 30px;
+  margin-left: 15px;
+}
 
 .containerAppear {
   left: 0;

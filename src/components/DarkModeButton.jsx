@@ -98,7 +98,7 @@ export default function DarkModeButton() {
                       ? <StyledTitle theme={theme} className='modeSelector__title modeSelector__title--language'>Sélection de la langue</StyledTitle> 
                       : <StyledTitle theme={theme} className='modeSelector__title'>Select Language</StyledTitle>
                     }
-                    <div className='modeSelector__switch'>
+                    <div className='modeSelector__switch modeSelector__switch--language'>
                         <StyledText theme={theme} className='modeSelector__switch__mode' onClick={() => setLanguage('french')}>Français</StyledText>
                         <StyledText theme={theme} className='modeSelector__switch__mode' onClick={() => setLanguage('english')}>English</StyledText>
                     </div>
