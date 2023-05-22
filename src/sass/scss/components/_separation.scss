@@ -1,0 +1,196 @@
+.separation {
+    white-space: nowrap;
+    color: #191919;
+    margin-bottom: 250px;
+    margin-left: -20%;
+        &__line {
+            &__text {
+                color: #191919;
+                font-family: 'AmericaExpRg';
+                font-weight: bold;
+                font-size: 40px;
+                margin: 50px;
+                    &--green {
+                        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        text-fill-color: transparent;
+                    }
+                    &--red {
+                        background: linear-gradient(70deg, #24C6DC 0%, #514A9D 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        text-fill-color: transparent;
+                    }
+                    &--purple {
+                        background: linear-gradient(90deg, #8360C3 0%, #2EBF91 100%);     
+                        -webkit-background-clip: text;                   
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        text-fill-color: transparent;
+                    }
+                    @media (max-width: 630px) {
+                        font-size: 30px;
+                        margin: 25px;
+                    }
+            }
+            &--first {
+                @media (max-width: 1400px) {
+                    margin-left: -5%;
+                }
+                @media (max-width: 1300px) {
+                    margin-left: -10%;
+                }
+                @media (max-width: 1150px) {
+                    margin-left: -13%;
+                }
+                @media (max-width: 1020px) {
+                    margin-left: -15%;
+                }
+                @media (max-width: 950px) {
+                    margin-left: -18%;
+                }
+                @media (max-width: 860px) {
+                    margin-left: -20%;
+                }
+                @media (max-width: 800px) {
+                    margin-left: -22%;
+                }
+                @media (max-width: 700px) {
+                    margin-left: -24%;
+                }
+                @media (max-width: 630px) {
+                    margin-left: -15%;
+                }
+                @media (max-width: 590px) {
+                    margin-left: -16%;
+                }
+                @media (max-width: 530px) {
+                    margin-left: -17%;
+                }
+                @media (max-width: 500px) {
+                    margin-left: -18%;
+                }
+                @media (max-width: 470px) {
+                    margin-left: -19%;
+                }
+                @media (max-width: 450px) {
+                    margin-left: -20.5%;
+                }
+                @media (max-width: 400px) {
+                    margin-left: -22%;
+                }
+                @media (max-width: 350px) {
+                    margin-left: -24.5%;
+                }
+            }
+            &--second {
+                @media (max-width: 1400px) {
+                    margin-left: -3%;
+                }
+                @media (max-width: 1150px) {
+                    margin-left: -4%;
+                }
+                @media (max-width: 950px) {
+                    margin-left: -6.5%;
+                }
+                @media (max-width: 860px) {
+                    margin-left: -7.5%;
+                }
+                @media (max-width: 800px) {
+                    margin-left: -8%;
+                }
+                @media (max-width: 740px) {
+                    margin-left: -9%;
+                }
+                @media (max-width: 690px) {
+                    margin-left: -10%;
+                }
+                @media (max-width: 630px) {
+                    margin-left: -5%;
+                }
+                @media (max-width: 590px) {
+                    margin-left: -5%;
+                }
+                @media (max-width: 530px) {
+                    margin-left: -6%;
+                }
+                @media (max-width: 470px) {
+                    margin-left: -7%;
+                }
+                @media (max-width: 450px) {
+                    margin-left: -7.5%;
+                }
+                @media (max-width: 400px) {
+                    margin-left: -8.3%;
+                }
+                @media (max-width: 350px) {
+                    margin-left: -9.2%;
+                }
+            }
+            &--third {
+                @media (max-width: 1400px) {
+                    margin-left: -5%;
+                }
+                @media (max-width: 1300px) {
+                    margin-left: -7%;
+                }
+                @media (max-width: 1150px) {
+                    margin-left: -10%;
+                }
+                @media (max-width: 950px) {
+                    margin-left: -13%;
+                }
+                @media (max-width: 860px) {
+                    margin-left: -14.5%;
+                }
+                @media (max-width: 800px) {
+                    margin-left: -16%;
+                }
+                @media (max-width: 700px) {
+                    margin-left: -19%;
+                }
+                @media (max-width: 630px) {
+                    margin-left: -10%;
+                }
+                @media (max-width: 590px) {
+                    margin-left: -13%;
+                }
+                @media (max-width: 530px) {
+                    margin-left: -13.5%;
+                }
+                @media (max-width: 470px) {
+                    margin-left: -15.5%;
+                }
+                @media (max-width: 450px) {
+                    margin-left: -17%;
+                }
+                @media (max-width: 400px) {
+                    margin-left: -19%;
+                }
+                @media (max-width: 350px) {
+                    margin-left: -20.5%;
+                }
+            }
+        }
+        @media (max-width: 1400px) {
+            margin-left: -60%;
+        }
+        @media (max-width: 1450px) {
+            margin-bottom: 130px;
+        }
+        @media (max-width: 1200px) {
+            margin-left: -65%;
+        }
+        @media (max-width: 1000px) {
+            margin-left: -70%;
+        }
+        @media (max-width: 800px) {
+            margin-left: -75%;
+        }
+        @media (max-width: 768px) {
+            margin-bottom: 80px;
+        }
+}

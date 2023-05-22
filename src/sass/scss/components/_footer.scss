@@ -1,0 +1,40 @@
+.footer {
+    border-top: 1px solid black;
+    background-color: #0d0d0d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    transition: all 1.5s ease-in-out;
+        &__name {
+            font-family: 'AmericaExpRg';
+            font-size: 14px;
+            color: black;
+            margin-left: 8%;
+                @media (max-width: 530px) {
+                    margin-left: 0;
+                }
+        }
+        &__social {
+            margin-right: 8%;
+            width: 6%;
+            min-width: 100px;
+            display: flex;
+            justify-content: space-between;
+                &__logo {
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                @media (max-width: 530px) {
+                    margin-right: 0;
+                    margin: 12px 0;
+                }
+        }
+        &--active {
+            background-color: #EFEFEF;
+        }
+        @media (max-width: 530px) {
+            flex-direction: column;
+        }
+    }
