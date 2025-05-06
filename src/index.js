@@ -7,7 +7,6 @@ import Header from './components/Header';
 import Home from './components/01Home';
 import Separation from './components/02Separation'
 import WebDevelopment from './components/03WebDevelopment';
-import Design from './components/04Design';
 import Portfolio from './components/05Portfolio';
 import Contact from './components/06Contact';
 import Footer from './components/Footer';
@@ -22,7 +21,6 @@ root.render(
         <Home />
         <Separation />
         <WebDevelopment />
-        <Design />
         <Portfolio />
         <Contact />
       </main>

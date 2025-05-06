@@ -75,23 +75,6 @@ import javascript from '../assets/logo_javascript.png'
 import blender from '../assets/logo_blender.png'
 import photoshop from '../assets/logo_photoshop.png'
 
-
-// Reveal Awesome
-import { keyframes } from "@emotion/react";
-import { Reveal } from "react-awesome-reveal";
-
-const customAnimation = keyframes`
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-`;
-
-
-
 export default function Portfolio() {
     // function managing the style for the description of each project
     function openProjectDescription(id) {

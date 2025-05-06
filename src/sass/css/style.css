@@ -1241,96 +1241,6 @@ template {
     top: 110px;
   }
 }
-.skills__illustration__part--colorSelect {
-  box-shadow: 0px 4px 15px 8px rgba(0, 0, 0, 0.5);
-  width: 28%;
-  top: 30px;
-  left: -10%;
-}
-@media (max-width: 1450px) {
-  .skills__illustration__part--colorSelect {
-    width: 23%;
-    left: -8%;
-  }
-}
-@media (max-width: 800px) {
-  .skills__illustration__part--colorSelect {
-    top: 60px;
-  }
-}
-@media (max-width: 550px) {
-  .skills__illustration__part--colorSelect {
-    min-width: 70px;
-    top: 0px;
-  }
-}
-.skills__illustration__part--layers {
-  box-shadow: 0px 4px 15px 8px rgba(0, 0, 0, 0.5);
-  width: 33%;
-  top: 500px;
-  left: 27%;
-}
-@media (max-width: 1450px) {
-  .skills__illustration__part--layers {
-    width: 25%;
-    top: 780px;
-  }
-}
-@media (max-width: 1100px) {
-  .skills__illustration__part--layers {
-    top: 670px;
-  }
-}
-@media (max-width: 800px) {
-  .skills__illustration__part--layers {
-    top: 550px;
-  }
-}
-@media (max-width: 650px) {
-  .skills__illustration__part--layers {
-    top: 500px;
-  }
-}
-@media (max-width: 550px) {
-  .skills__illustration__part--layers {
-    min-width: 80px;
-    top: 400px;
-  }
-}
-@media (max-width: 450px) {
-  .skills__illustration__part--layers {
-    top: 350px;
-  }
-}
-@media (max-width: 380px) {
-  .skills__illustration__part--layers {
-    top: 310px;
-  }
-}
-.skills__illustration__part--colorStyle {
-  box-shadow: 0px 4px 15px 8px rgba(0, 0, 0, 0.5);
-  width: 25%;
-  top: 250px;
-  right: -10%;
-}
-@media (max-width: 1450px) {
-  .skills__illustration__part--colorStyle {
-    width: 20%;
-    top: 250px;
-    right: -6%;
-  }
-}
-@media (max-width: 550px) {
-  .skills__illustration__part--colorStyle {
-    min-width: 60px;
-    top: 100px;
-  }
-}
-@media (max-width: 380px) {
-  .skills__illustration__part--colorStyle {
-    top: 70px;
-  }
-}
 @media (max-width: 1450px) {
   .skills__illustration {
     width: auto;
@@ -1339,67 +1249,6 @@ template {
 @media (max-width: 700px) {
   .skills__illustration {
     margin-top: -30px;
-  }
-}
-@media (max-width: 1450px) {
-  .skills--design {
-    flex-direction: column-reverse !important;
-    margin-top: 1100px;
-    margin-bottom: 1200px;
-  }
-}
-@media (max-width: 1400px) {
-  .skills--design {
-    margin-top: 1000px;
-  }
-}
-@media (max-width: 1200px) {
-  .skills--design {
-    margin-top: 900px;
-  }
-}
-@media (max-width: 1100px) {
-  .skills--design {
-    margin-bottom: 1050px;
-  }
-}
-@media (max-width: 1000px) {
-  .skills--design {
-    margin-top: 800px;
-  }
-}
-@media (max-width: 850px) {
-  .skills--design {
-    margin-top: 680px;
-    margin-bottom: 900px;
-  }
-}
-@media (max-width: 700px) {
-  .skills--design {
-    margin-top: 580px;
-    margin-bottom: 800px;
-  }
-}
-@media (max-width: 580px) {
-  .skills--design {
-    margin-top: 530px;
-    margin-bottom: 700px;
-  }
-}
-@media (max-width: 550px) {
-  .skills--design {
-    margin-bottom: 600px;
-  }
-}
-@media (max-width: 480px) {
-  .skills--design {
-    margin-top: 470px;
-    margin-bottom: 550px;
-  }
-}
-@media (max-width: 430px) {
-  .skills--design {
-    margin-bottom: 450px;
   }
 }
 @media (max-width: 1450px) {
@@ -2230,11 +2079,16 @@ template {
   color: red;
 }
 .contact__form__submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 20%;
   min-width: 200px;
+  height: 80px;
   margin-top: 45px;
-  background-color: white;
-  border: 3px solid white;
+  background-color: black;
+  border: 3px solid black;
   padding: 25px 60px 25px 60px;
   position: relative;
   overflow: hidden;
@@ -2251,6 +2105,9 @@ template {
 }
 .contact__form__submit__text--active {
   color: white;
+}
+.contact__form__submit__loader {
+  padding-bottom: 4px;
 }
 .contact__form__submit::before {
   content: "";
@@ -2275,12 +2132,44 @@ template {
 }
 .contact__form__submit--active {
   background-color: black;
-  border: 3px solid black;
 }
 @media (max-width: 600px) {
   .contact__form__submit {
     width: 100%;
   }
+}
+.contact__form__submit.loading {
+  background-color: white;
+  transition: 0s background-color;
+}
+.contact__form__submit.sent {
+  background-color: white;
+  transition: 0s background-color;
+}
+.contact__form__submit.sent:hover {
+  cursor: default;
+}
+.contact__form__submit.sent:hover::before {
+  right: 100%;
+  border-radius: 0;
+}
+.contact__form__notice {
+  font-family: "AmericaExpRg";
+  color: black;
+  font-size: 12px;
+  font-weight: lighter;
+}
+.contact__form__confirmation {
+  font-family: "AmericaExpRg";
+  font-size: 16px;
+  font-weight: bold;
+  color: #23B26D;
+}
+.contact__form__error {
+  font-family: "AmericaExpRg";
+  font-size: 16px;
+  font-weight: bold;
+  color: #D32F2F;
 }
 .contact__form--active {
   color: black;
