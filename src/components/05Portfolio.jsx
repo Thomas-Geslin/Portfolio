@@ -10,55 +10,25 @@ import 'swiper/css/pagination';
 
 // Projects Illustrations
 import zikzag from '../assets/zikzag01.webp'
-import zikzagMedium from '../assets/zikzag01_medium.webp'
-import zikzagSmall from '../assets/zikzag01_small.webp'
 import zikzag02 from '../assets/zikzag02.webp'
-import zikzag02Medium from '../assets/zikzag02_medium.webp'
-import zikzag02Small from '../assets/zikzag02_small.webp'
 import zikzag03 from '../assets/zikzag03.webp'
-import zikzag03Medium from '../assets/zikzag03_medium.webp'
-import zikzag03Small from '../assets/zikzag03_small.webp'
 
 import trackizer from '../assets/Trackizer01.png'
-import trackizerMedium from '../assets/Trackizer01_medium.png'
-import trackizerSmall from '../assets/Trackizer01_small.png'
 import trackizer02 from '../assets/Trackizer02.webp'
-import trackizer02Medium from '../assets/Trackizer02_medium.webp'
-import trackizer02Small from '../assets/Trackizer02_small.webp'
 import trackizer03 from '../assets/Trackizer03.webp'
-import trackizer03Medium from '../assets/Trackizer03_medium.webp'
-import trackizer03Small from '../assets/Trackizer03_small.webp'
 
 import elecar from '../assets/Elecar01.webp'
-import elecarMedium from '../assets/Elecar01_medium.webp'
-import elecarSmall from '../assets/Elecar01_small.webp'
 import elecar02 from '../assets/Elecar02.webp'
-import elecar02Medium from '../assets/Elecar02_medium.webp'
-import elecar02Small from '../assets/Elecar02_small.webp'
 import elecar03 from '../assets/Elecar03.webp'
-import elecar03Medium from '../assets/Elecar03_medium.webp'
-import elecar03Small from '../assets/Elecar03_small.webp'
 
 import oneRenovation from '../assets/OneRenovation01.png'
-import oneRenovationMedium from '../assets/OneRenovation01_medium.png'
-import oneRenovationSmall from '../assets/OneRenovation01_small.png'
 
 import holux from '../assets/Holux01.webp'
-import holuxMedium from '../assets/Holux01_medium.webp'
-import holuxSmall from '../assets/Holux01_small.webp'
 
 import mac from '../assets/3d01.webp'
-import macMedium from '../assets/3d01_medium.webp'
-import macSmall from '../assets/3d01_small.webp'
 import chair01 from '../assets/3d02.webp'
-import chair01Medium from '../assets/3d02_medium.webp'
-import chair01Small from '../assets/3d02_small.webp'
 import chair02 from '../assets/3d03.webp'
-import chair02Medium from '../assets/3d03_medium.webp'
-import chair02Small from '../assets/3d03_small.webp'
 import machine from '../assets/3d04.webp'
-import machineMedium from '../assets/3d04_medium.webp'
-import machineSmall from '../assets/3d04_small.webp'
 
 
 // Projects Stack
@@ -129,9 +99,9 @@ export default function Portfolio() {
                         }}
                         className="portfolio__projects__part__swiper"
                     >
-                        <SwiperSlide><img src={zikzag} srcset={`${zikzag} 1025w, ${zikzagMedium} 700w, ${zikzagSmall} 400w`} sizes="(min-width: 1981px) 1025px, (max-width: 1980px) and (min-width: 1180px) 700px, (max-width: 1179px) and (min-width: 900px) 1025px, (max-width: 899px) and (min-width: 600px) 700px, 400px" alt='Illustration de mon projet ZikZag' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
-                        <SwiperSlide><img src={zikzag02} srcset={`${zikzag02} 1025w, ${zikzag02Medium} 700w, ${zikzag02Small} 400w`} sizes="(min-width: 1981px) 1025px, (max-width: 1980px) and (min-width: 1180px) 700px, (max-width: 1179px) and (min-width: 900px) 1025px, (max-width: 899px) and (min-width: 600px) 700px, 400px" alt='Illustration de mon projet ZikZag' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
-                        <SwiperSlide><img src={zikzag03} srcset={`${zikzag03} 1025w, ${zikzag03Medium} 700w, ${zikzag03Small} 400w`} sizes="(min-width: 1981px) 1025px, (max-width: 1980px) and (min-width: 1180px) 700px, (max-width: 1179px) and (min-width: 900px) 1025px, (max-width: 899px) and (min-width: 600px) 700px, 400px" alt='Illustration de mon projet ZikZag' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
+                        <SwiperSlide><img src={zikzag} alt='Illustration de mon projet ZikZag' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
+                        <SwiperSlide><img src={zikzag02} alt='Illustration de mon projet ZikZag' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
+                        <SwiperSlide><img src={zikzag03} alt='Illustration de mon projet ZikZag' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
                     </Swiper>
 
                     <div className="portfolio__projects__part__description">
@@ -192,9 +162,9 @@ export default function Portfolio() {
                         }}
                         className="portfolio__projects__part__swiper"
                     >
-                        <SwiperSlide><img src={trackizer} srcset={`${trackizer} 1025w, ${trackizerMedium} 750w, ${trackizerSmall} 450w`} sizes="(min-width: 1981px) 1025px, (max-width: 1980px) and (min-width: 1180px) 750px, (max-width: 1179px) and (min-width: 900px) 1025px, (max-width: 899px) and (min-width: 600px) 750px, 450px" alt='Illustration de mon projet OneRenovation' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
-                        <SwiperSlide><img src={trackizer02} srcset={`${trackizer02} 1025w, ${trackizer02Medium} 700w, ${trackizer02Small} 400w`} sizes="(min-width: 1981px) 1025px, (max-width: 1980px) and (min-width: 1180px) 700px, (max-width: 1179px) and (min-width: 900px) 1025px, (max-width: 899px) and (min-width: 600px) 700px, 400px" alt='Illustration de mon projet OneRenovation' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
-                        <SwiperSlide><img src={trackizer03} srcset={`${trackizer03} 1025w, ${trackizer03Medium} 700w, ${trackizer03Small} 400w`} sizes="(min-width: 1981px) 1025px, (max-width: 1980px) and (min-width: 1180px) 700px, (max-width: 1179px) and (min-width: 900px) 1025px, (max-width: 899px) and (min-width: 600px) 700px, 400px" alt='Illustration de mon projet OneRenovation' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
+                        <SwiperSlide><img src={trackizer} alt='Illustration de mon projet OneRenovation' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
+                        <SwiperSlide><img src={trackizer02} alt='Illustration de mon projet OneRenovation' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
+                        <SwiperSlide><img src={trackizer03} alt='Illustration de mon projet OneRenovation' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
                     </Swiper>
 
                     <div className="portfolio__projects__part__description">
@@ -245,7 +215,7 @@ export default function Portfolio() {
                         slidesPerView={1}
                         className="portfolio__projects__part__swiper"
                     >
-                        <SwiperSlide><img src={oneRenovation} srcset={`${oneRenovation} 1025w, ${oneRenovationMedium} 700w, ${oneRenovationSmall} 400w`} sizes="(min-width: 1981px) 1025px, (max-width: 1980px) and (min-width: 1180px) 700px, (max-width: 1179px) and (min-width: 900px) 1025px, (max-width: 899px) and (min-width: 600px) 700px, 400px" alt='Illustration de mon projet OneRenovation' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
+                        <SwiperSlide><img src={oneRenovation} alt='Illustration de mon projet OneRenovation' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
                     </Swiper>
 
                     <div className="portfolio__projects__part__description">
@@ -301,9 +271,9 @@ export default function Portfolio() {
                         }}
                         className="portfolio__projects__part__swiper"
                     >
-                        <SwiperSlide><img src={elecar} srcset={`${elecar} 1025w, ${elecarMedium} 700w, ${elecarSmall} 400w`} sizes="(min-width: 1981px) 1025px, (max-width: 1980px) and (min-width: 1180px) 700px, (max-width: 1179px) and (min-width: 900px) 1025px, (max-width: 899px) and (min-width: 600px) 700px, 400px" alt='Illustration de mon projet ZikZag' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
-                        <SwiperSlide><img src={elecar02} srcset={`${elecar02} 1025w, ${elecar02Medium} 700w, ${elecar02Small} 400w`} sizes="(min-width: 1981px) 1025px, (max-width: 1980px) and (min-width: 1180px) 700px, (max-width: 1179px) and (min-width: 900px) 1025px, (max-width: 899px) and (min-width: 600px) 700px, 400px" alt='Illustration de mon projet ZikZag' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
-                        <SwiperSlide><img src={elecar03} srcset={`${elecar03} 1025w, ${elecar03Medium} 700w, ${elecar03Small} 400w`} sizes="(min-width: 1981px) 1025px, (max-width: 1980px) and (min-width: 1180px) 700px, (max-width: 1179px) and (min-width: 900px) 1025px, (max-width: 899px) and (min-width: 600px) 700px, 400px" alt='Illustration de mon projet ZikZag' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
+                        <SwiperSlide><img src={elecar} alt='Illustration de mon projet ZikZag' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
+                        <SwiperSlide><img src={elecar02} alt='Illustration de mon projet ZikZag' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
+                        <SwiperSlide><img src={elecar03} alt='Illustration de mon projet ZikZag' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
                     </Swiper>
 
                     <div className="portfolio__projects__part__description" onClick={() => openProjectDescription('06')}>
@@ -354,7 +324,7 @@ export default function Portfolio() {
                         slidesPerView={1}
                         className="portfolio__projects__part__swiper"
                     >
-                        <SwiperSlide><img src={holux} srcset={`${holux} 1025w, ${holuxMedium} 700w, ${holuxSmall} 400w`} sizes="(min-width: 1981px) 1025px, (max-width: 1980px) and (min-width: 1180px) 700px, (max-width: 1179px) and (min-width: 900px) 1025px, (max-width: 899px) and (min-width: 600px) 700px, 400px" alt='Illustration de mon projet Holux' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
+                        <SwiperSlide><img src={holux} alt='Illustration de mon projet Holux' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
                     </Swiper>
 
                     <div className="portfolio__projects__part__description">
@@ -406,10 +376,10 @@ export default function Portfolio() {
                         }}
                         className="portfolio__projects__part__swiper"
                     >
-                        <SwiperSlide><img src={chair01} srcset={`${chair01} 1025w, ${chair01Medium} 700w, ${chair01Small} 400w`} sizes="(min-width: 1981px) 1025px, (max-width: 1980px) and (min-width: 1180px) 700px, (max-width: 1179px) and (min-width: 900px) 1025px, (max-width: 899px) and (min-width: 600px) 700px, 400px" alt='Illustration de mon projet ZikZag' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
-                        <SwiperSlide><img src={chair02} srcset={`${chair02} 1025w, ${chair02Medium} 700w, ${chair02Small} 400w`} sizes="(min-width: 1981px) 1025px, (max-width: 1980px) and (min-width: 1180px) 700px, (max-width: 1179px) and (min-width: 900px) 1025px, (max-width: 899px) and (min-width: 600px) 700px, 400px" alt='Illustration de mon projet ZikZag' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
-                        <SwiperSlide><img src={mac} srcset={`${mac} 1025w, ${macMedium} 700w, ${macSmall} 400w`} sizes="(min-width: 1981px) 1025px, (max-width: 1980px) and (min-width: 1180px) 700px, (max-width: 1179px) and (min-width: 900px) 1025px, (max-width: 899px) and (min-width: 600px) 700px, 400px" alt='Illustration de mon projet ZikZag' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
-                        <SwiperSlide><img src={machine} srcset={`${machine} 1025w, ${machineMedium} 700w, ${machineSmall} 400w`} sizes="(min-width: 1981px) 1025px, (max-width: 1980px) and (min-width: 1180px) 700px, (max-width: 1179px) and (min-width: 900px) 1025px, (max-width: 899px) and (min-width: 600px) 700px, 400px" alt='Illustration de mon projet ZikZag' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
+                        <SwiperSlide><img src={chair01} alt='Illustration de mon projet ZikZag' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
+                        <SwiperSlide><img src={chair02} alt='Illustration de mon projet ZikZag' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
+                        <SwiperSlide><img src={mac} alt='Illustration de mon projet ZikZag' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
+                        <SwiperSlide><img src={machine} alt='Illustration de mon projet ZikZag' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
                     </Swiper>
 
                     <div className="portfolio__projects__part__description">
