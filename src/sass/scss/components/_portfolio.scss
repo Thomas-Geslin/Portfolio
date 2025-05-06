@@ -523,20 +523,7 @@ display: grid;
     max-width: 100%;
 }
 
-// Change the style of the Swiper navigation arrows
-:root {
-    --swiper-navigation-color: white;
-}
-
-.swiper-button-prev {
-    display: none;
-}
-.swiper-button-prev::after {
-    display: none;
-}
-.swiper-button-next {
-    display: none;
-}
-.swiper-button-next::after {
-    display: none;
+// Change the style of the Swiper pagination bullets
+.swiper-pagination-bullet-active {
+    background: black!important;
 }

@@ -48,10 +48,10 @@ export default function WebDevlopment() {
 
 
     return(
-        <div ref={ref} className="skills" id="webParallax">
+        <div ref={ref} className="skills skills--development" id="webParallax">
             <div id="about" className="skills__content">
                 <h2 className="skills__content__title">Development</h2>
-                <p className="skills__content__subtitle">Web Development is the biggest part of my work, whether it is a simple website, or a more complex mobile application, my priority is always the satisfaction of my clients.</p>
+                <p className="skills__content__subtitle">Web and Mobile Development is the biggest part of my work, whether it is a simple website, or a more complex mobile application, my priority is always the satisfaction of my clients.</p>
             
                 <div className="skills__content__list">
                     <span className="skills__content__list__line"></span>

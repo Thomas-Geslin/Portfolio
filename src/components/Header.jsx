@@ -60,7 +60,7 @@ export default function Header() {
                 <nav className="header__nav" id="navigation">
                     <ul className="header__nav__list">
                         <Link to="about" duration={1300} smooth={true} offset={-100} onClick={() => resetSidebarStyle()} className="header__nav__list__link">About</Link>
-                        <Link to="portfolio" duration={2000} smooth={true} offset={150} onClick={() => resetSidebarStyle()} className="header__nav__list__link">Work</Link>
+                        <Link to="portfolio" duration={2000} smooth={true} offset={150} onClick={() => resetSidebarStyle()} className="header__nav__list__link">Portfolio</Link>
                         <Link to="contact" duration={2500} smooth={true} offset={170} onClick={() => resetSidebarStyle()} className="header__nav__list__link--last">Contact Me</Link>
                     </ul>
                 </nav>

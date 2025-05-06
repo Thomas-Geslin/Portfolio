@@ -2,11 +2,11 @@ import React from "react";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectFade, Navigation } from "swiper";
+import { EffectFade, Pagination, Autoplay } from "swiper";
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-fade';
-import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 // Projects Illustrations
 import zikzag from '../assets/zikzag01.webp'
@@ -118,11 +118,15 @@ export default function Portfolio() {
 
                     <Swiper
                         slidesPerView={1}
-                        modules={[EffectFade, Navigation]} 
+                        modules={[EffectFade, Pagination, Autoplay]} 
                         effect="fade"
                         speed={750}
                         loop
-                        navigation
+                        pagination
+                        autoplay={{
+                            delay: 5000,
+                            disableOnInteraction: true,
+                        }}
                         className="portfolio__projects__part__swiper"
                     >
                         <SwiperSlide><img src={zikzag} srcset={`${zikzag} 1025w, ${zikzagMedium} 700w, ${zikzagSmall} 400w`} sizes="(min-width: 1981px) 1025px, (max-width: 1980px) and (min-width: 1180px) 700px, (max-width: 1179px) and (min-width: 900px) 1025px, (max-width: 899px) and (min-width: 600px) 700px, 400px" alt='Illustration de mon projet ZikZag' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
@@ -177,11 +181,15 @@ export default function Portfolio() {
 
                     <Swiper
                         slidesPerView={1}
-                        modules={[EffectFade, Navigation]} 
+                        modules={[EffectFade, Pagination, Autoplay]} 
                         effect="fade"
                         speed={750}
                         loop
-                        navigation
+                        pagination
+                        autoplay={{
+                            delay: 5000,
+                            disableOnInteraction: true,
+                        }}
                         className="portfolio__projects__part__swiper"
                     >
                         <SwiperSlide><img src={trackizer} srcset={`${trackizer} 1025w, ${trackizerMedium} 750w, ${trackizerSmall} 450w`} sizes="(min-width: 1981px) 1025px, (max-width: 1980px) and (min-width: 1180px) 750px, (max-width: 1179px) and (min-width: 900px) 1025px, (max-width: 899px) and (min-width: 600px) 750px, 450px" alt='Illustration de mon projet OneRenovation' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
@@ -235,11 +243,6 @@ export default function Portfolio() {
 
                     <Swiper
                         slidesPerView={1}
-                        modules={[EffectFade, Navigation]} 
-                        effect="fade"
-                        speed={750}
-                        loop
-                        navigation
                         className="portfolio__projects__part__swiper"
                     >
                         <SwiperSlide><img src={oneRenovation} srcset={`${oneRenovation} 1025w, ${oneRenovationMedium} 700w, ${oneRenovationSmall} 400w`} sizes="(min-width: 1981px) 1025px, (max-width: 1980px) and (min-width: 1180px) 700px, (max-width: 1179px) and (min-width: 900px) 1025px, (max-width: 899px) and (min-width: 600px) 700px, 400px" alt='Illustration de mon projet OneRenovation' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
@@ -287,11 +290,15 @@ export default function Portfolio() {
 
                     <Swiper
                         slidesPerView={1}
-                        modules={[EffectFade, Navigation]} 
+                        modules={[EffectFade, Pagination, Autoplay]} 
                         effect="fade"
                         speed={750}
                         loop
-                        navigation
+                        pagination
+                        autoplay={{
+                            delay: 5000,
+                            disableOnInteraction: true,
+                        }}
                         className="portfolio__projects__part__swiper"
                     >
                         <SwiperSlide><img src={elecar} srcset={`${elecar} 1025w, ${elecarMedium} 700w, ${elecarSmall} 400w`} sizes="(min-width: 1981px) 1025px, (max-width: 1980px) and (min-width: 1180px) 700px, (max-width: 1179px) and (min-width: 900px) 1025px, (max-width: 899px) and (min-width: 600px) 700px, 400px" alt='Illustration de mon projet ZikZag' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
@@ -345,11 +352,6 @@ export default function Portfolio() {
 
                     <Swiper
                         slidesPerView={1}
-                        modules={[EffectFade, Navigation]} 
-                        effect="fade"
-                        speed={750}
-                        loop
-                        navigation
                         className="portfolio__projects__part__swiper"
                     >
                         <SwiperSlide><img src={holux} srcset={`${holux} 1025w, ${holuxMedium} 700w, ${holuxSmall} 400w`} sizes="(min-width: 1981px) 1025px, (max-width: 1980px) and (min-width: 1180px) 700px, (max-width: 1179px) and (min-width: 900px) 1025px, (max-width: 899px) and (min-width: 600px) 700px, 400px" alt='Illustration de mon projet Holux' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>
@@ -393,11 +395,15 @@ export default function Portfolio() {
 
                     <Swiper
                         slidesPerView={1}
-                        modules={[EffectFade, Navigation]} 
+                        modules={[EffectFade, Pagination, Autoplay]} 
                         effect="fade"
                         speed={750}
                         loop
-                        navigation
+                        pagination
+                        autoplay={{
+                            delay: 5000,
+                            disableOnInteraction: true,
+                        }}
                         className="portfolio__projects__part__swiper"
                     >
                         <SwiperSlide><img src={chair01} srcset={`${chair01} 1025w, ${chair01Medium} 700w, ${chair01Small} 400w`} sizes="(min-width: 1981px) 1025px, (max-width: 1980px) and (min-width: 1180px) 700px, (max-width: 1179px) and (min-width: 900px) 1025px, (max-width: 899px) and (min-width: 600px) 700px, 400px" alt='Illustration de mon projet ZikZag' className="portfolio__projects__part__swiper__picture" /></SwiperSlide>

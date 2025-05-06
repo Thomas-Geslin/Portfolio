@@ -6,7 +6,8 @@ import './sass/css/style.css'
 import Header from './components/Header';
 import Home from './components/01Home';
 import Separation from './components/02Separation'
-import WebDevelopment from './components/03WebDevelopment';
+import About from './components/03About';
+import WebDevelopment from './components/04WebDevelopment';
 import Portfolio from './components/05Portfolio';
 import Contact from './components/06Contact';
 import Footer from './components/Footer';
@@ -20,6 +21,7 @@ root.render(
       <main>
         <Home />
         <Separation />
+        <About />
         <WebDevelopment />
         <Portfolio />
         <Contact />

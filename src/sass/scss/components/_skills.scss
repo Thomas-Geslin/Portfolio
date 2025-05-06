@@ -31,6 +31,9 @@
                             position: absolute;
                             height: 1px;
                             width: 88%;
+                                @media (max-width: 375px) {
+                                    transform: translateX(-50%);                       
+                                }
                         }
                         &__text {
                             font-size: 24px;
@@ -42,6 +45,9 @@
                                     padding-top: 15px;
                                     margin-bottom: 15px;
                                 }
+                        }
+                        @media (max-width: 375px) {
+                            text-align: center;                        
                         }
                 }
                 @media (max-width: 1450px) {
@@ -55,8 +61,18 @@
                     position: absolute;
                     width: 100%;
                     border-radius: 6px;
+                        &--portrait {
+                            width: 65%;
+                            left: 15%;
+                                @media (max-width: 1450px) {
+                                    display: none;
+                                }
+                        } 
                         &--coding {
                             top: 120px;
+                                @media (max-width: 375px) {
+                                    display: none;
+                                }
                         }
                         &--phone {
                             box-shadow: 0px 4px 15px -8px rgba(0, 0, 0, 0.5);
@@ -82,6 +98,9 @@
                                 @media (max-width: 480px) {
                                     top: 160px;
                                 }
+                                @media (max-width: 375px) {
+                                    display: none;
+                                }
                         }
                         &--terminal {
                             box-shadow: 0px 4px 15px -2px rgba(0, 0, 0, 0.3);
@@ -95,6 +114,9 @@
                                 }
                                 @media (max-width: 700px) {
                                     min-width: 260px;
+                                }
+                                @media (max-width: 375px) {
+                                    display: none;
                                 }
                         }
                         &--trackizer {
@@ -110,6 +132,44 @@
                 @media (max-width: 700px) {
                     margin-top: -30px;
                 }
+        }
+        &--about {
+            margin-bottom: 300px;
+            @media (max-width: 1450px) {
+                margin-bottom: 0;
+            }
+        }
+        &--development {
+            @media (max-width: 1450px) {
+                margin-bottom: 1000px;
+            }
+            @media (max-width: 1280px) {
+                margin-bottom: 950px;
+            }
+            @media (max-width: 1150px) {
+                margin-bottom: 900px;
+            }
+            @media (max-width: 1000px) {
+                margin-bottom: 830px;
+            }
+            @media (max-width: 850px) {
+                margin-bottom: 630px;
+            }
+            @media (max-width: 600px) {
+                margin-bottom: 550px;
+            }
+            @media (max-width: 540px) {
+                margin-bottom: 520px;
+            }
+            @media (max-width: 500px) {
+                margin-bottom: 500px;
+            }
+            @media (max-width: 450px) {
+                margin-bottom: 450px;
+            }
+            @media (max-width: 375px) {
+                margin-bottom: 100px;
+            }
         }
         @media (max-width: 1450px) {
             flex-direction: column;

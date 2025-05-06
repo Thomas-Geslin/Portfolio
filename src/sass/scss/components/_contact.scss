@@ -123,11 +123,16 @@
                     color: red;
                 }
                 &__submit {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
                     width: 20%;
                     min-width: 200px;
+                    height: 80px;
                     margin-top: 45px;
-                    background-color: white;
-                    border: 3px solid white;
+                    background-color: black;
+                    border: 3px solid black;
                     padding: 25px 60px 25px 60px;
                     position: relative;
                     overflow: hidden;
@@ -143,6 +148,9 @@
                                 &--active {
                                     color: white;
                                 }
+                        }
+                        &__loader {
+                            padding-bottom: 4px;
                         }
                         &::before {
                             content: '';
@@ -167,11 +175,43 @@
                         }
                         &--active {
                             background-color: black;
-                            border: 3px solid black;
                         }
                         @media (max-width: 600px) {
                             width: 100%;
                         }
+                        &.loading {
+                            background-color: white;
+                            transition: 0s background-color;
+                        }
+                        &.sent {
+                            background-color: white;
+                            transition: 0s background-color;
+                            &:hover {
+                                cursor: default;
+                            }
+                            &:hover::before {
+                                right: 100%;
+                                border-radius: 0;
+                            }
+                        }
+                }
+                &__notice {
+                    font-family: 'AmericaExpRg';
+                    color: black;
+                    font-size: 12px;
+                    font-weight: lighter;
+                }
+                &__confirmation {
+                    font-family: 'AmericaExpRg';
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #23B26D;
+                }
+                &__error {
+                    font-family: 'AmericaExpRg';
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #D32F2F;
                 }
                 &--active {
                     color: black;

@@ -1,5 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form"
+import { PuffLoader } from "react-spinners";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import axios from 'axios';
 
 
 export default function Contact() {
@@ -76,22 +79,31 @@ export default function Contact() {
 
 
     // Form handlers
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => {
-        fetch('https://thomas-geslin.com/', {
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-            body: JSON.stringify(data)
-        })
-        .then(alert('Your email has been sent !'))
-        .then(res => console.log(res))
-        .then(() => window.location.reload())
-        .catch(err => console.log(err));
-    }
+    const [requestLoading, setRequestLoading] = useState(false);
+    const [requestSent, setRequestSent] = useState(false);
+    const [requestError, setRequestError] = useState(false);
 
+    const { register, handleSubmit, getValues, formState: { errors } } = useForm();
+
+    const onSubmit = async () => {
+        try {
+            setRequestLoading(true);
+
+            await axios.post('https://portfolioback-sv4z.onrender.com/api/send-email', {
+              first_name: getValues('firstName'),
+              last_name: getValues('lastName'),
+              email: getValues('email'),
+              phone_number: getValues('phoneNumber'),
+              message: getValues('message')
+            });
+
+            setRequestLoading(false);
+            setRequestSent(true);
+        } catch (error) {
+            setRequestLoading(false);
+            setRequestError(true);
+        }
+    }
 
     return(
         <div id="contact" className="contact">
@@ -172,7 +184,41 @@ export default function Contact() {
                 </div>
 
 
-                <button type="submit" className="contact__form__submit"><p className="contact__form__submit__text">SEND</p></button>
+                <button type="submit" disabled={requestSent || requestError} className={`contact__form__submit ${requestLoading ? 'loading' : ''} ${requestSent ? 'sent' : ''}`}>
+                        <p className="contact__form__submit__text">
+                            {((!requestLoading && !requestSent && !requestError)) && 'SEND'}
+                        </p>
+
+                        <PuffLoader
+                            loading={requestLoading}
+                            size={18}
+                            className="contact__form__submit__loader"
+                        />
+                        
+                        {requestSent === true
+                            && <DotLottieReact
+                                src="https://lottie.host/cc66b4d8-aef1-4d54-a552-3d6eefb824fd/FRzb8GHdma.lottie"
+                                autoplay
+                                style={{ width: 300, height: 80 }}
+                            />
+                        }
+
+                        {requestError === true
+                            && <DotLottieReact
+                                src="https://lottie.host/a120397f-5301-48f1-9cb8-2c8b7f7153e2/fbEnvFblog.lottie"
+                                autoplay
+                                style={{ width: 200, height: 200 }}
+                            />
+                        }
+                </button>
+
+                {requestLoading && <p className="contact__form__notice">Your message can take some time to be sent. <br />Please don't refresh the page</p>}
+
+                {requestSent && <p className="contact__form__confirmation">Request delivered !</p>}
+
+                {requestError && <p className="contact__form__error" style={{ marginBottom: 5 }}>Their has been a problem sending your request.</p>}
+                {requestError && <p className="contact__form__notice" style={{ marginTop: 5 }}>Retry in a few minutes, or send me you request directly to this email : <a href="mailto:thomas.geslin31@gmail.com">thomas.geslin31@gmail.com</a></p>}
+
             </form>
         </div>
     )
